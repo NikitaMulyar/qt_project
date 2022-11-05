@@ -45,6 +45,12 @@
      </item>
      <item row="4" column="1">
       <widget class="QLabel" name="label_5">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>90</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
@@ -61,7 +67,7 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLabel" name="place_txt">
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;JetBrains Mono&quot;;
+font: 24pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -76,10 +82,10 @@ border-top-color: rgb(0, 0, 0);
       <widget class="QLabel" name="id_txt">
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;JetBrains Mono&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
+font: 24pt &quot;Courier&quot;;
 </string>
        </property>
        <property name="text">
@@ -120,7 +126,7 @@ border-top-color: rgb(0, 0, 0);
       <widget class="QLabel" name="balance_txt">
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;JetBrains Mono&quot;;
+font: 24pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -136,6 +142,12 @@ border-top-color: rgb(0, 0, 0);
        <property name="enabled">
         <bool>true</bool>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>90</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
@@ -150,6 +162,12 @@ color: rgb(0, 0, 0);</string>
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="label_4">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>90</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
@@ -166,7 +184,7 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLabel" name="name_txt">
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;JetBrains Mono&quot;;
+font: 24pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -179,6 +197,18 @@ border-top-color: rgb(0, 0, 0);
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="label_3">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>90</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
@@ -193,6 +223,12 @@ color: rgb(0, 0, 0);</string>
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="label_6">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>90</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
@@ -257,7 +293,7 @@ color: rgb(0, 0, 0);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;JetBrains Mono&quot;;
+font: 24pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
 </string>
@@ -340,9 +376,9 @@ background-color: rgba(253, 128, 8, 128);</string>
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
-color: rgb(15, 128, 255);
-background-color: rgba(255, 255, 255, 64);</string>
+          <string notr="true">color: rgb(15, 128, 255);
+background-color: rgba(255, 255, 255, 64);
+font: 24pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Сменить пароль</string>
@@ -376,7 +412,8 @@ background-color: rgba(255, 255, 255, 64);</string>
          <property name="styleSheet">
           <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
 color: rgb(15, 128, 255);
-background-color: rgba(255, 255, 255, 64);</string>
+background-color: rgba(255, 255, 255, 64);
+font: 24pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Сменить юзернейм</string>
@@ -410,7 +447,8 @@ background-color: rgba(255, 255, 255, 64);</string>
          <property name="styleSheet">
           <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
 color: rgb(15, 128, 255);
-background-color: rgba(255, 255, 255, 64);</string>
+background-color: rgba(255, 255, 255, 64);
+font: 24pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Установить аватарку</string>
@@ -444,7 +482,8 @@ background-color: rgba(255, 255, 255, 64);</string>
          <property name="styleSheet">
           <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
 color: rgb(15, 128, 255);
-background-color: rgba(255, 255, 255, 64);</string>
+background-color: rgba(255, 255, 255, 64);
+font: 24pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Удалить аккаунт</string>
@@ -467,6 +506,42 @@ background-color: rgba(255, 255, 255, 64);</string>
       </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="go_back">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>950</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+color: rgb(252, 1, 7);
+background-color: rgb(254, 204, 102);</string>
+    </property>
+    <property name="text">
+     <string>Назад</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

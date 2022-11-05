@@ -56,6 +56,14 @@ class Ui_LogWindow(object):
 "font: 75 36pt \"Helvetica\";\n"
 "background-color: rgb(226, 118, 43);")
         self.log_btn.setObjectName("log_btn")
+        self.go_back = QtWidgets.QPushButton(self.centralwidget)
+        self.go_back.setGeometry(QtCore.QRect(1340, 740, 200, 60))
+        self.go_back.setMinimumSize(QtCore.QSize(200, 60))
+        self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+"color: rgb(252, 1, 7);\n"
+"background-color: rgb(254, 204, 102);")
+        self.go_back.setObjectName("go_back")
         LogWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LogWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1920, 24))
@@ -74,3 +82,4 @@ class Ui_LogWindow(object):
         self.label.setText(_translate("LogWindow", "Введите юзернейм"))
         self.label_3.setText(_translate("LogWindow", "Введите пароль"))
         self.log_btn.setText(_translate("LogWindow", "ВОЙТИ"))
+        self.go_back.setText(_translate("LogWindow", "Назад"))

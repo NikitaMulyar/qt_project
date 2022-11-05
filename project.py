@@ -13,7 +13,7 @@ from reg_window import *
 from log_window import *
 from exceptions import *
 from check_funcs import *
-
+from stylesheets import *
 
 LOGINED = False
 USER_ID = -1
@@ -44,16 +44,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.pushButton.clicked.connect(self.games)
 
     def games(self):
-        stylesheet_choice = """
-            ChoiceWindow {
-                background-image: url("choice_game.png"); 
-                background-repeat: no-repeat; 
-                background-position: center;
-            }
-        """
         self.games_w = ChoiceWindow()
         self.games_w.setStyleSheet(stylesheet_choice)
         self.games_w.show()
+        self.close()
 
 
 class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
@@ -61,33 +55,37 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
         super().__init__()
         self.setupUi(self)
         self.setFixedSize(1920, 1100)
-        self.acc.setIcon(QIcon("acc_icon.png"))
+        connect = sqlite3.connect('users_db.sqlite3')
+        cur = connect.cursor()
+        filename = 'acc_icon.png'
+        if USER_ID != -1:
+            res = cur.execute("""SELECT filename FROM users
+                                    WHERE id = ?""", (USER_ID,)).fetchall()
+            connect.close()
+            if len(res) != 0:
+                filename = res[0][0]
+        self.acc.setIcon(QIcon(filename))
         self.acc.setIconSize(QSize(50, 50))
         self.acc.clicked.connect(self.info)
+        self.go_back.clicked.connect(self.back)
 
     def info(self):
         if not LOGINED:
-            stylesheet_rol = """
-                LogOrRegWindow {
-                    background-image: url("acc_new_or_old.png"); 
-                    background-repeat: no-repeat; 
-                    background-position: center;
-                }
-            """
             self.rol_w = LogOrRegWindow()
             self.rol_w.setStyleSheet(stylesheet_rol)
             self.rol_w.show()
+            self.close()
         else:
-            stylesheet_acc = """
-                            AccWindow {
-                                background-image: url("acc_bg.png"); 
-                                background-repeat: no-repeat; 
-                                background-position: center;
-                            }
-                        """
             self.acc_w = AccWindow()
             self.acc_w.setStyleSheet(stylesheet_acc)
             self.acc_w.show()
+            self.close()
+
+    def back(self):
+        self.main_w = MainWindow()
+        self.main_w.setStyleSheet(stylesheet_main)
+        self.main_w.show()
+        self.close()
 
     def work(self):
         pass
@@ -100,32 +98,25 @@ class LogOrRegWindow(QMainWindow, Ui_LogOrRegWindow):
         self.setFixedSize(1920, 1100)
         self.reg_syst_btn.clicked.connect(self.run_r)
         self.log_btn.clicked.connect(self.run_l)
+        self.go_back.clicked.connect(self.back)
 
     def run_r(self):
-        stylesheet_reg = """
-            RegWindow {
-                background-image: url("registration.png"); 
-                background-repeat: no-repeat; 
-                background-position: center;
-            }
-        """
         self.reg_w = RegWindow()
         self.reg_w.setStyleSheet(stylesheet_reg)
         self.reg_w.show()
         self.hide()
 
     def run_l(self):
-        stylesheet_log = """
-            LogWindow {
-                background-image: url("login_in_system.png"); 
-                background-repeat: no-repeat; 
-                background-position: center;
-            }
-        """
         self.log_w = LogWindow()
         self.log_w.setStyleSheet(stylesheet_log)
         self.log_w.show()
         self.hide()
+
+    def back(self):
+        self.games_w = ChoiceWindow()
+        self.games_w.setStyleSheet(stylesheet_choice)
+        self.games_w.show()
+        self.close()
 
 
 class RegWindow(QMainWindow, Ui_RegWindow):
@@ -135,6 +126,7 @@ class RegWindow(QMainWindow, Ui_RegWindow):
         self.setFixedSize(1920, 1100)
         self.reg_btn.clicked.connect(self.run)
         self.psw_enter.setEchoMode(QLineEdit.EchoMode.Password)
+        self.go_back.clicked.connect(self.back)
 
     def run(self):
         global LOGINED, USER_ID
@@ -153,17 +145,16 @@ class RegWindow(QMainWindow, Ui_RegWindow):
         USER_ID = int(cur.execute("""SELECT id FROM users
                         WHERE username = ? and password = ?""", (name, psw,)).fetchall()[0][0])
         connect.close()
-        stylesheet_acc = """
-            AccWindow {
-                background-image: url("acc_bg.png"); 
-                background-repeat: no-repeat; 
-                background-position: center;
-            }
-        """
         self.acc_w = AccWindow()
         self.acc_w.setStyleSheet(stylesheet_acc)
         self.acc_w.show()
         self.hide()
+
+    def back(self):
+        self.rol_w = LogOrRegWindow()
+        self.rol_w.setStyleSheet(stylesheet_rol)
+        self.rol_w.show()
+        self.close()
 
 
 class LogWindow(QMainWindow, Ui_LogWindow):
@@ -173,6 +164,7 @@ class LogWindow(QMainWindow, Ui_LogWindow):
         self.setFixedSize(1920, 1100)
         self.log_btn.clicked.connect(self.run)
         self.psw_enter.setEchoMode(QLineEdit.EchoMode.Password)
+        self.go_back.clicked.connect(self.back)
 
     def run(self):
         global LOGINED, USER_ID
@@ -186,19 +178,18 @@ class LogWindow(QMainWindow, Ui_LogWindow):
         if len(result):
             LOGINED = True
             USER_ID = int(result[0][0])
-            stylesheet_acc = """
-                AccWindow {
-                    background-image: url("acc_bg.png"); 
-                    background-repeat: no-repeat; 
-                    background-position: center;
-                }
-            """
             self.acc_w = AccWindow()
             self.acc_w.setStyleSheet(stylesheet_acc)
             self.acc_w.show()
-            self.hide()
+            self.close()
         else:
             error('Неверный юзернейм или пароль!', self)
+
+    def back(self):
+        self.rol_w = LogOrRegWindow()
+        self.rol_w.setStyleSheet(stylesheet_rol)
+        self.rol_w.show()
+        self.close()
 
 
 class AccWindow(QMainWindow, Ui_AccWindow):
@@ -207,6 +198,7 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         self.setupUi(self)
         self.setFixedSize(1920, 1100)
         self.psw_btn.clicked.connect(self.show_hide)
+        self.go_back.clicked.connect(self.open_choice_win)
         connect = sqlite3.connect('users_db.sqlite3')
         cur = connect.cursor()
         res = cur.execute("""SELECT * FROM users
@@ -238,10 +230,13 @@ class AccWindow(QMainWindow, Ui_AccWindow):
             self.psw_txt.setText(self.psw)
 
     def upd_pic(self):
-        self.filename = QFileDialog.getOpenFileName(
-            self, 'Выбрать картинку', '',
-            'Картинка (*.jpg);;Картинка (*.png);;Все файлы (*)')[0]
-        file = open(self.filename, "rb")
+        try:
+            self.filename = QFileDialog.getOpenFileName(
+                self, 'Выбрать картинку', '',
+                'Картинка (*.jpg);;Картинка (*.png);;Все файлы (*)')[0]
+            file = open(self.filename, "rb")
+        except Exception:
+            return
         data = sqlite3.Binary(file.read())
         connect = sqlite3.connect('users_db.sqlite3')
         cur = connect.cursor()
@@ -256,15 +251,16 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         self.image.setScaledContents(True)
         self.image.move(420, 180)
         self.image.resize(100, 100)
+        self.acc_w = AccWindow()
+        self.acc_w.setStyleSheet(stylesheet_acc)
+        self.acc_w.show()
+        self.close()
 
-
-stylesheet_main = """
-    MainWindow {
-        background-image: url("main.png"); 
-        background-repeat: no-repeat; 
-        background-position: center;
-    }
-"""
+    def open_choice_win(self):
+        self.games_w = ChoiceWindow()
+        self.games_w.setStyleSheet(stylesheet_choice)
+        self.games_w.show()
+        self.close()
 
 
 if __name__ == '__main__':

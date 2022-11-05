@@ -106,7 +106,7 @@ background-color: rgba(254, 184, 43, 128);</string>
         </size>
        </property>
        <property name="cursor">
-        <cursorShape>SplitHCursor</cursorShape>
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 24pt &quot;Georgia&quot;;
@@ -401,7 +401,7 @@ font: 24pt &quot;Verdana&quot;;</string>
         </size>
        </property>
        <property name="cursor">
-        <cursorShape>SplitHCursor</cursorShape>
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 24pt &quot;Georgia&quot;;
@@ -496,6 +496,39 @@ color: rgb(128, 0, 2);</string>
     </property>
     <property name="text">
      <string>Мой Аккаунт</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="go_back">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>940</y>
+      <width>191</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+color: rgb(252, 1, 7);
+background-color: rgb(254, 204, 102);</string>
+    </property>
+    <property name="text">
+     <string>Назад</string>
     </property>
    </widget>
   </widget>

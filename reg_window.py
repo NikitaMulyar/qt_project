@@ -57,6 +57,14 @@ class Ui_RegWindow(object):
 "font: 75 36pt \"Helvetica\";\n"
 "background-color: rgb(226, 118, 43);")
         self.reg_btn.setObjectName("reg_btn")
+        self.go_back = QtWidgets.QPushButton(self.centralwidget)
+        self.go_back.setGeometry(QtCore.QRect(1340, 730, 200, 60))
+        self.go_back.setMinimumSize(QtCore.QSize(200, 60))
+        self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+"color: rgb(252, 1, 7);\n"
+"background-color: rgb(254, 204, 102);")
+        self.go_back.setObjectName("go_back")
         RegWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(RegWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1920, 24))
@@ -75,3 +83,4 @@ class Ui_RegWindow(object):
         self.label.setText(_translate("RegWindow", "Придумайте юзернейм"))
         self.label_3.setText(_translate("RegWindow", "Придумайте пароль"))
         self.reg_btn.setText(_translate("RegWindow", "ЗАРЕГИСТРИРОВАТЬСЯ"))
+        self.go_back.setText(_translate("RegWindow", "Назад"))
