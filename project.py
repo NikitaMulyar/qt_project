@@ -266,7 +266,7 @@ stylesheet_main = """
     }
 """
 
-f = 'login_in_system'
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MainWindow()
