@@ -310,30 +310,17 @@ border-top-color: rgb(0, 0, 0);
      <rect>
       <x>240</x>
       <y>650</y>
-      <width>1451</width>
+      <width>1570</width>
       <height>281</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
       <widget class="QLabel" name="label_11">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>80</height>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -352,21 +339,14 @@ background-color: rgba(253, 128, 8, 128);</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <spacer name="horizontalSpacer_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <widget class="QPushButton" name="change_psw_btn">
          <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
           <size>
            <width>300</width>
            <height>60</height>
@@ -386,21 +366,14 @@ font: 24pt &quot;Courier&quot;;</string>
         </widget>
        </item>
        <item>
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <widget class="QPushButton" name="change_name_btn">
          <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
           <size>
            <width>300</width>
            <height>60</height>
@@ -421,21 +394,42 @@ font: 24pt &quot;Courier&quot;;</string>
         </widget>
        </item>
        <item>
-        <spacer name="horizontalSpacer_6">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
+        <widget class="QPushButton" name="log_out_btn">
+         <property name="minimumSize">
           <size>
-           <width>40</width>
-           <height>20</height>
+           <width>300</width>
+           <height>60</height>
           </size>
          </property>
-        </spacer>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
+color: rgb(15, 128, 255);
+background-color: rgba(255, 255, 255, 64);
+font: 24pt &quot;Courier&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Выйти из профиля</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="load_profile_pic">
          <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
           <size>
            <width>300</width>
            <height>60</height>
@@ -456,21 +450,14 @@ font: 24pt &quot;Courier&quot;;</string>
         </widget>
        </item>
        <item>
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <widget class="QPushButton" name="del_acc_btn">
          <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
           <size>
            <width>300</width>
            <height>60</height>
@@ -490,19 +477,6 @@ font: 24pt &quot;Courier&quot;;</string>
          </property>
         </widget>
        </item>
-       <item>
-        <spacer name="horizontalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </item>
     </layout>
@@ -510,8 +484,8 @@ font: 24pt &quot;Courier&quot;;</string>
    <widget class="QPushButton" name="go_back">
     <property name="geometry">
      <rect>
-      <x>1200</x>
-      <y>950</y>
+      <x>1130</x>
+      <y>940</y>
       <width>200</width>
       <height>60</height>
      </rect>

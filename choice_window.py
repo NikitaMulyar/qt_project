@@ -189,8 +189,8 @@ class Ui_ChoiceWindow(object):
         self.horizontalLayout.addWidget(self.label)
         self.balance_curr_txt = QtWidgets.QLabel(self.horizontalLayoutWidget)
         self.balance_curr_txt.setMinimumSize(QtCore.QSize(400, 0))
-        self.balance_curr_txt.setStyleSheet("font: 30pt \"Impact\";\n"
-"color: rgb(252, 2, 128);")
+        self.balance_curr_txt.setStyleSheet("color: rgb(252, 1, 7);\n"
+"font: 75 36pt \"Courier\";")
         self.balance_curr_txt.setObjectName("balance_curr_txt")
         self.horizontalLayout.addWidget(self.balance_curr_txt)
         self.acc = QtWidgets.QPushButton(self.centralwidget)
@@ -249,7 +249,7 @@ class Ui_ChoiceWindow(object):
 "выпавший коэффициент больше либо\n"
 "равен вашему, то вы получите\n"
 "ваш приз в рамезере вашей ставки\n"
-"на ваш поставленный кэффициент"))
+"на ваш поставленный коэффициент"))
         self.label_12.setText(_translate("ChoiceWindow", "Ответьте на вопрос и\n"
 "получите денежный приз!"))
         self.label_15.setText(_translate("ChoiceWindow", "Обменяйте ваши деньги на призы!"))

@@ -134,15 +134,13 @@ class Ui_AccWindow(object):
         self.psw_txt.setObjectName("psw_txt")
         self.gridLayout.addWidget(self.psw_txt, 2, 3, 1, 2)
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(240, 650, 1451, 281))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(240, 650, 1570, 281))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        self.verticalLayout.addItem(spacerItem4)
         self.label_11 = QtWidgets.QLabel(self.verticalLayoutWidget)
-        self.label_11.setMaximumSize(QtCore.QSize(16777215, 80))
+        self.label_11.setMaximumSize(QtCore.QSize(16777215, 60))
         self.label_11.setStyleSheet("font: 75 36pt \"Helvetica\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgba(253, 128, 8, 128);")
@@ -151,20 +149,18 @@ class Ui_AccWindow(object):
         self.verticalLayout.addWidget(self.label_11)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem5)
         self.change_psw_btn = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.change_psw_btn.setMinimumSize(QtCore.QSize(300, 60))
+        self.change_psw_btn.setMaximumSize(QtCore.QSize(300, 60))
         self.change_psw_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.change_psw_btn.setStyleSheet("color: rgb(15, 128, 255);\n"
 "background-color: rgba(255, 255, 255, 64);\n"
 "font: 24pt \"Courier\";")
         self.change_psw_btn.setObjectName("change_psw_btn")
         self.horizontalLayout.addWidget(self.change_psw_btn)
-        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem6)
         self.change_name_btn = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.change_name_btn.setMinimumSize(QtCore.QSize(300, 60))
+        self.change_name_btn.setMaximumSize(QtCore.QSize(300, 60))
         self.change_name_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.change_name_btn.setStyleSheet("font: 24pt \"JetBrains Mono\";\n"
 "color: rgb(15, 128, 255);\n"
@@ -172,10 +168,19 @@ class Ui_AccWindow(object):
 "font: 24pt \"Courier\";")
         self.change_name_btn.setObjectName("change_name_btn")
         self.horizontalLayout.addWidget(self.change_name_btn)
-        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem7)
+        self.log_out_btn = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.log_out_btn.setMinimumSize(QtCore.QSize(300, 60))
+        self.log_out_btn.setMaximumSize(QtCore.QSize(300, 60))
+        self.log_out_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.log_out_btn.setStyleSheet("font: 24pt \"JetBrains Mono\";\n"
+"color: rgb(15, 128, 255);\n"
+"background-color: rgba(255, 255, 255, 64);\n"
+"font: 24pt \"Courier\";")
+        self.log_out_btn.setObjectName("log_out_btn")
+        self.horizontalLayout.addWidget(self.log_out_btn)
         self.load_profile_pic = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.load_profile_pic.setMinimumSize(QtCore.QSize(300, 60))
+        self.load_profile_pic.setMaximumSize(QtCore.QSize(300, 60))
         self.load_profile_pic.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.load_profile_pic.setStyleSheet("font: 24pt \"JetBrains Mono\";\n"
 "color: rgb(15, 128, 255);\n"
@@ -183,10 +188,9 @@ class Ui_AccWindow(object):
 "font: 24pt \"Courier\";")
         self.load_profile_pic.setObjectName("load_profile_pic")
         self.horizontalLayout.addWidget(self.load_profile_pic)
-        spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem8)
         self.del_acc_btn = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.del_acc_btn.setMinimumSize(QtCore.QSize(300, 60))
+        self.del_acc_btn.setMaximumSize(QtCore.QSize(300, 60))
         self.del_acc_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.del_acc_btn.setStyleSheet("font: 24pt \"JetBrains Mono\";\n"
 "color: rgb(15, 128, 255);\n"
@@ -194,11 +198,9 @@ class Ui_AccWindow(object):
 "font: 24pt \"Courier\";")
         self.del_acc_btn.setObjectName("del_acc_btn")
         self.horizontalLayout.addWidget(self.del_acc_btn)
-        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
-        self.horizontalLayout.addItem(spacerItem9)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.go_back = QtWidgets.QPushButton(self.centralwidget)
-        self.go_back.setGeometry(QtCore.QRect(1200, 950, 200, 60))
+        self.go_back.setGeometry(QtCore.QRect(1130, 940, 200, 60))
         self.go_back.setMinimumSize(QtCore.QSize(0, 60))
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
@@ -236,6 +238,7 @@ class Ui_AccWindow(object):
         self.label_11.setText(_translate("AccWindow", "Действия"))
         self.change_psw_btn.setText(_translate("AccWindow", "Сменить пароль"))
         self.change_name_btn.setText(_translate("AccWindow", "Сменить юзернейм"))
+        self.log_out_btn.setText(_translate("AccWindow", "Выйти из профиля"))
         self.load_profile_pic.setText(_translate("AccWindow", "Установить аватарку"))
         self.del_acc_btn.setText(_translate("AccWindow", "Удалить аккаунт"))
         self.go_back.setText(_translate("AccWindow", "Назад"))

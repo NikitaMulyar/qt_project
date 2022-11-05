@@ -317,7 +317,7 @@ font: 24pt &quot;Verdana&quot;;</string>
 выпавший коэффициент больше либо
 равен вашему, то вы получите
 ваш приз в рамезере вашей ставки
-на ваш поставленный кэффициент</string>
+на ваш поставленный коэффициент</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -461,8 +461,8 @@ color: rgb(128, 0, 2);</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 30pt &quot;Impact&quot;;
-color: rgb(252, 2, 128);</string>
+        <string notr="true">color: rgb(252, 1, 7);
+font: 75 36pt &quot;Courier&quot;;</string>
        </property>
        <property name="text">
         <string>0</string>
