@@ -12,6 +12,7 @@ from acc_new_or_old import *
 from reg_window import *
 from log_window import *
 
+
 LOGINED = False
 USER_ID = -1
 CHECKED = True
