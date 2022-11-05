@@ -11,114 +11,13 @@ from acc_info import *
 from acc_new_or_old import *
 from reg_window import *
 from log_window import *
+from exceptions import *
+from check_funcs import *
 
 
 LOGINED = False
 USER_ID = -1
 CHECKED = True
-
-
-class PasswordError(Exception):
-    pass
-
-
-class UsernameError(Exception):
-    pass
-
-
-class LengthError(PasswordError):
-    def __str__(self):
-        return 'Длина пароля должна быть больше либо равна 8!'
-
-
-class LetterError(PasswordError):
-    def __str__(self):
-        return 'В пароле должны быть как заглавные, так и строчные буквы!'
-
-
-class DigitError(PasswordError):
-    def __str__(self):
-        return 'В пароле должны присутствовать цифры!'
-
-
-class SequenceError(PasswordError):
-    def __str__(self):
-        return 'Нельзя использовать 3 и более подряд идуших символов!'
-
-
-class WordError(PasswordError):
-    def __str__(self):
-        return 'В пароле не должно быть слов!'
-
-
-class NotAlphaAndDigitError(PasswordError):
-    def __str__(self):
-        return 'Пароль должен состоять только из латинских букв и цифр!'
-
-
-class UsedError(UsernameError):
-    def __str__(self):
-        return 'Такой юзернейм уже занят!'
-
-
-class LenNameError(UsernameError):
-    def __str__(self):
-        return 'Длина юзернейма должна быть больше либо равна 3!'
-
-
-dict_words = set()
-some_words = set()
-f_o = open("top 10000 passwd.txt", encoding="utf-8", mode="r")
-f_o2 = open("top-9999-words.txt", encoding="utf-8", mode="r")
-for line in f_o:
-    line = line.strip('\n')
-    some_words.add(line)
-for line in f_o2:
-    line = line.strip('\n')
-    dict_words.add(line)
-f_o.close()
-f_o2.close()
-pc = dict()
-mac = dict()
-pc1 = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm', 'йцукенгшщзхъ', 'фывапролджэ', 'ячсмитьбю']
-mac1 = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm', 'йцукенгшщзхъ', 'фывапролджэё', 'ячсмитьбю']
-cnt = 1
-for i in pc1:
-    for j in i:
-        pc[j] = cnt
-        cnt += 1
-    cnt = 1
-cnt = 1
-for i in mac1:
-    for j in i:
-        mac[j] = cnt
-        cnt += 1
-    cnt = 1
-
-
-def check_password(psw):
-    if len(psw) < 8:
-        raise LengthError
-    if psw.lower() == psw or psw.upper() == psw:
-        raise LetterError
-    for i in psw:
-        if i.isdigit():
-            break
-    else:
-        raise DigitError
-    for i in range(len(psw) - 4):
-        if psw[i].isalpha() and psw[i + 1].isalpha() and psw[i + 2].isalpha():
-            if pc[psw[i + 2].lower()] - pc[psw[i + 1].lower()] == \
-                    pc[psw[i + 1].lower()] - pc[psw[i].lower()] == 1:
-                raise SequenceError
-            if mac[psw[i + 2].lower()] - mac[psw[i + 1].lower()] == \
-                    mac[psw[i + 1].lower()] - mac[psw[i].lower()] == 1:
-                raise SequenceError
-    for w in dict_words:
-        if w in psw:
-            raise WordError
-    if not psw.isalnum():
-        raise NotAlphaAndDigitError
 
 
 def error(exp, self):
@@ -135,18 +34,6 @@ def append_user(name, psw):
     cursor.execute(f"INSERT INTO users(username, password, balance) VALUES('{name}', '{psw}', 0)")
     connect.commit()
     connect.close()
-
-
-def check_name(name):
-    connect = sqlite3.connect('users_db.sqlite3')
-    cur = connect.cursor()
-    result = cur.execute("""SELECT * FROM users
-                WHERE username = ?""", (name,)).fetchall()
-    connect.close()
-    if len(name) < 3:
-        raise LenNameError
-    if len(result):
-        raise UsedError
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
