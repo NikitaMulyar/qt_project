@@ -16,9 +16,9 @@ from exceptions import *
 from check_funcs import *
 from stylesheets import *
 
+
 LOGINED = False
 USER_ID = -1
-CHECKED = True
 
 
 def error(exp, self):
@@ -210,7 +210,7 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         self.psw_txt.setText(res[0][2])
         self.balance_txt.setText(str(res[0][3]))
         self.psw = res[0][2]
-        self.psw_btn.setChecked(CHECKED)
+        self.psw_btn.setChecked(True)
         self.show_hide()
         self.load_profile_pic.clicked.connect(self.upd_pic)
         self.log_out_btn.clicked.connect(self.log_out_func)
