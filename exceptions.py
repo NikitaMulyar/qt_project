@@ -36,9 +36,19 @@ class NotAlphaAndDigitError(PasswordError):
         return 'Пароль должен состоять только из латинских букв и цифр!'
 
 
+class CurrPswError(PasswordError):
+    def __str__(self):
+        return 'Нельзя указывать текущий пароль!'
+
+
 class UsedError(UsernameError):
     def __str__(self):
         return 'Такой юзернейм уже занят!'
+
+
+class CurrError(UsernameError):
+    def __str__(self):
+        return 'Нельзя указывать текущий юзернейм!'
 
 
 class LenNameError(UsernameError):

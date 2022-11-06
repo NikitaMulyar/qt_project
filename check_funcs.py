@@ -32,7 +32,9 @@ for i in mac1:
     cnt = 1
 
 
-def check_password(psw):
+def check_password(psw, old=''):
+    if old != '' and psw == old:
+        raise CurrPswError
     if len(psw) < 8:
         raise LengthError
     if psw.lower() == psw or psw.upper() == psw:
@@ -57,7 +59,9 @@ def check_password(psw):
         raise NotAlphaAndDigitError
 
 
-def check_name(name):
+def check_name(name, old=''):
+    if old != '' and old == name:
+        raise CurrError
     connect = sqlite3.connect('users_db.sqlite3')
     cur = connect.cursor()
     result = cur.execute("""SELECT * FROM users

@@ -1,6 +1,7 @@
 import sys
 import sqlite3
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
+from PyQt6.QtWidgets import QInputDialog
 from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtCore import QSize
 from PIL.ImageQt import ImageQt
@@ -212,6 +213,10 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         self.psw_btn.setChecked(CHECKED)
         self.show_hide()
         self.load_profile_pic.clicked.connect(self.upd_pic)
+        self.log_out_btn.clicked.connect(self.log_out_func)
+        self.change_name_btn.clicked.connect(self.change_username)
+        self.change_psw_btn.clicked.connect(self.change_psw)
+        self.del_acc_btn.clicked.connect(self.del_acc)
         pic = res[0][4]
         self.pixmap = QPixmap()
         if pic is not None:
@@ -251,6 +256,9 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         self.image.setScaledContents(True)
         self.image.move(420, 180)
         self.image.resize(100, 100)
+        self.reopen()
+
+    def reopen(self):
         self.acc_w = AccWindow()
         self.acc_w.setStyleSheet(stylesheet_acc)
         self.acc_w.show()
@@ -260,6 +268,72 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         self.games_w = ChoiceWindow()
         self.games_w.setStyleSheet(stylesheet_choice)
         self.games_w.show()
+        self.close()
+
+    def log_out_func(self):
+        global LOGINED, USER_ID
+        LOGINED = False
+        USER_ID = -1
+        self.ex = MainWindow()
+        self.ex.setStyleSheet(stylesheet_main)
+        self.ex.show()
+        self.close()
+
+    def change_username(self):
+        new_name, ok = QInputDialog.getText(self, 'Смена юзернейма',
+                                            'Введите новый юзернейм:')
+        if ok:
+            connect = sqlite3.connect('users_db.sqlite3')
+            cur = connect.cursor()
+            tmp = cur.execute("""SELECT username FROM users WHERE id = ?""",
+                              (USER_ID,)).fetchall()[0][0]
+            try:
+                check_name(new_name, old=tmp)
+            except Exception as exp:
+                error(exp, self)
+                return
+            cur.execute("""UPDATE users SET username = ? WHERE id = ?""", (new_name, USER_ID,))
+            connect.commit()
+            connect.close()
+            self.reopen()
+
+    def change_psw(self):
+        new_psw, ok = QInputDialog.getText(self, 'Смена пароля',
+                                           'Введите новый пароль:',
+                                           echo=QLineEdit.EchoMode.Password)
+        if not ok:
+            return
+        connect = sqlite3.connect('users_db.sqlite3')
+        cur = connect.cursor()
+        tmp = cur.execute("""SELECT password FROM users WHERE id = ?""",
+                          (USER_ID,)).fetchall()[0][0]
+        try:
+            check_password(new_psw, old=tmp)
+        except Exception as exp:
+            error(exp, self)
+        cur.execute("""UPDATE users SET password = ? WHERE id = ?""", (new_psw, USER_ID,))
+        connect.commit()
+        connect.close()
+        self.reopen()
+
+    def del_acc(self):
+        global LOGINED, USER_ID
+        answer, ok_pressed = QInputDialog.getItem(
+            self, "Подтверждение удаления",
+            f"Вы действительно хотите удалить аккаунт?",
+            ('',), 1, False)
+        if not ok_pressed:
+            return
+        connect = sqlite3.connect('users_db.sqlite3')
+        cur = connect.cursor()
+        cur.execute("""DELETE from users WHERE id = ?""", (USER_ID,))
+        connect.commit()
+        connect.close()
+        LOGINED = False
+        USER_ID = -1
+        self.ex = MainWindow()
+        self.ex.setStyleSheet(stylesheet_main)
+        self.ex.show()
         self.close()
 
 
