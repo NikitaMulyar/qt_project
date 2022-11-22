@@ -1,12 +1,9 @@
 import sys
-import sqlite3
 import random
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
 from PyQt6.QtWidgets import QInputDialog
 from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtCore import QSize
-from PIL.ImageQt import ImageQt
-from PIL import Image
 from main_window import *
 from choice_window import *
 from acc_info import *
@@ -16,10 +13,11 @@ from log_window import *
 from level_window import *
 from work_cmd import *
 from vikt import *
-from exceptions import *
+from kazino import *
 from check_funcs import *
 from stylesheets import *
 from questions import *
+import time
 
 
 LOGINED = False
@@ -68,11 +66,13 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
         filename = 'acc_icon.png'
         if USER_ID != -1:
             res = cur.execute("""SELECT filename, balance FROM users
-                                    WHERE id = ?""", (USER_ID,)).fetchall()
+                                    WHERE id = ?""", (USER_ID,)).fetchall()[0]
             connect.close()
             if len(res) != 0:
-                filename = res[0][0]
-                self.balance_curr_txt.setText(str(res[0][1]))
+                if res[0] is not None:
+                    filename = res[0]
+                if res[1] is not None:
+                    self.balance_curr_txt.setText(str(res[1]))
         self.acc.setIcon(QIcon(filename))
         self.acc.setIconSize(QSize(50, 50))
         self.acc.clicked.connect(self.info)
@@ -187,6 +187,101 @@ class ViktWindow(QMainWindow, Ui_ViktWindow):
         self.answ_area.clear()
 
 
+class KazWindow(QMainWindow, Ui_KazWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setFixedSize(1920, 1100)
+        self.go_back.clicked.connect(self.back)
+        self.run_btn.clicked.connect(self.run)
+        self.coef_txt.clear()
+        self.win_txt.clear()
+        connect = sqlite3.connect('users_db.sqlite3')
+        cur = connect.cursor()
+        curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = 
+{USER_ID}""").fetchall()[0][0]
+        self.curr_txt.setText(str(curr_blc))
+        self.stavka_summ.clear()
+        self.curr_hard.setText(HARD_LVL)
+
+    def back(self):
+        self.lvl_w = LvlWindow()
+        self.lvl_w.setStyleSheet(stylesheet_lvl)
+        self.lvl_w.show()
+        self.close()
+
+    def run(self):
+        try:
+            if '-' not in self.stavka_summ.text() and not self.stavka_summ.text().isdigit() or \
+                    '-' in self.stavka_summ.text() and self.stavka_summ.text()[1:].isdigit():
+                raise NotNumberError
+            summ = int(self.stavka_summ.text())
+            if summ < 100 or summ > 10000:
+                raise NotPositiveNumberError
+            if not check_balance(summ, USER_ID):
+                raise BigSummError
+            ver = random.randint(0, 10000)
+            coef = 1
+            if HARD_LVL == 'ЛЕГКАЯ':
+                if ver < 150:
+                    coef = 10
+                elif ver < 525:
+                    coef = 5
+                elif ver < 1500:
+                    coef = 2
+                elif ver < 3000:
+                    coef = 0
+                elif ver < 5000:
+                    coef = 0.5
+                else:
+                    coef = 1
+            elif HARD_LVL == 'СРЕДНЯЯ':
+                if ver < 80:
+                    coef = 20
+                elif ver < 180:
+                    coef = 10
+                elif ver < 925:
+                    coef = 3
+                elif ver < 4000:
+                    coef = 1
+                elif ver < 5500:
+                    coef = 0.75
+                elif ver < 8000:
+                    coef = 0.5
+                else:
+                    coef = 0
+            elif HARD_LVL == 'СЛОЖНАЯ':
+                if ver < 30:
+                    coef = 70
+                elif ver < 90:
+                    coef = 35
+                elif ver < 180:
+                    coef = 20
+                elif ver < 320:
+                    coef = 5
+                elif ver < 3000:
+                    coef = 1
+                elif ver < 4500:
+                    coef = 0.5
+                elif ver < 7000:
+                    coef = 0.3
+                else:
+                    coef = 0
+            self.coef_txt.setText(f'x{str(coef)}')
+            self.win_txt.setText(str(summ * coef))
+            connect = sqlite3.connect('users_db.sqlite3')
+            cur = connect.cursor()
+            curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = 
+            {USER_ID}""").fetchall()[0][0]
+            cur.execute(f"""UPDATE users SET balance = {int(curr_blc + summ * coef - summ)} WHERE 
+id = {USER_ID}""")
+            connect.commit()
+            connect.close()
+            self.curr_txt.setText(str(int(curr_blc + summ * coef - summ)))
+        except Exception as e:
+            error(e, self)
+
+
 class LvlWindow(QMainWindow, Ui_LevelWindow):
     def __init__(self):
         super().__init__()
@@ -210,6 +305,10 @@ class LvlWindow(QMainWindow, Ui_LevelWindow):
             self.task_w = ProbSolvWindow()
             self.task_w.setStyleSheet(stylesheet_prob)
             self.task_w.show()
+        elif MODE == 'Казино':
+            self.kaz_w = KazWindow()
+            self.kaz_w.setStyleSheet(stylesheet_kaz)
+            self.kaz_w.show()
         self.close()
 
 
@@ -232,9 +331,9 @@ class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
     def check_ans(self):
         msg = QMessageBox(self)
         if self.answ_area.text() == WORK_Q[HARD_LVL.lower().capitalize()][self.ind][1]:
-            add_s = 200
+            add_s = 100
             if HARD_LVL == 'СРЕДНЯЯ':
-                add_s = 400
+                add_s = 300
             elif HARD_LVL == 'СЛОЖНАЯ':
                 add_s = 600
             msg.setIcon(QMessageBox.Icon.Information)
@@ -375,8 +474,8 @@ class AccWindow(QMainWindow, Ui_AccWindow):
                         WHERE id = ?""", (USER_ID,)).fetchall()
         connect.close()
         self.id_txt.setText(str(USER_ID))
-        self.name_txt.setText(res[0][1])
-        self.psw_txt.setText(res[0][2])
+        self.name_txt.setText(str(res[0][1]))
+        self.psw_txt.setText(str(res[0][2]))
         self.balance_txt.setText(str(res[0][3]))
         self.psw = res[0][2]
         self.psw_btn.setChecked(True)
@@ -451,6 +550,7 @@ class AccWindow(QMainWindow, Ui_AccWindow):
     def change_username(self):
         new_name, ok = QInputDialog.getText(self, 'Смена юзернейма',
                                             'Введите новый юзернейм:')
+        new_name = str(new_name)
         if ok:
             connect = sqlite3.connect('users_db.sqlite3')
             cur = connect.cursor()
@@ -470,6 +570,7 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         new_psw, ok = QInputDialog.getText(self, 'Смена пароля',
                                            'Введите новый пароль:',
                                            echo=QLineEdit.EchoMode.Password)
+        new_psw = str(new_psw)
         if not ok:
             return
         connect = sqlite3.connect('users_db.sqlite3')

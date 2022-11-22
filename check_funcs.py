@@ -71,3 +71,11 @@ def check_name(name, old=''):
         raise LenNameError
     if len(result):
         raise UsedError
+
+
+def check_balance(stavka, id):
+    connect = sqlite3.connect('users_db.sqlite3')
+    cur = connect.cursor()
+    result = cur.execute(f"""SELECT balance FROM users WHERE id = {id}""").fetchall()[0][0]
+    connect.close()
+    return result >= stavka

@@ -6,6 +6,10 @@ class UsernameError(Exception):
     pass
 
 
+class SummError(Exception):
+    pass
+
+
 class LengthError(PasswordError):
     def __str__(self):
         return 'Длина пароля должна быть больше либо равна 8!'
@@ -54,3 +58,18 @@ class CurrError(UsernameError):
 class LenNameError(UsernameError):
     def __str__(self):
         return 'Длина юзернейма должна быть больше либо равна 3!'
+
+
+class NotPositiveNumberError(SummError):
+    def __str__(self):
+        return 'Сумма ставки должна быть от 100 до 10000!'
+
+
+class NotNumberError(SummError):
+    def __str__(self):
+        return 'Ставка должна быть числом!'
+
+
+class BigSummError(SummError):
+    def __str__(self):
+        return 'Сумма ставки должна быть меньше либо равна сумме баланса!'

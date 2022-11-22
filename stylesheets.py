@@ -69,3 +69,11 @@ stylesheet_vikt = """
                 background-position: center;
             }
         """
+
+stylesheet_kaz = """
+            KazWindow {
+                background-image: url("kazino.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """
