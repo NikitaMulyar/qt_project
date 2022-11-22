@@ -45,3 +45,19 @@ stylesheet_log = """
                 background-position: center;
             }
         """
+
+stylesheet_lvl = """
+            LvlWindow {
+                background-image: url("complexity.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """
+
+stylesheet_prob = """
+            ProbSolvWindow {
+                background-image: url("problem_solving.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """

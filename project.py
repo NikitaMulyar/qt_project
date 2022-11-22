@@ -1,5 +1,6 @@
 import sys
 import sqlite3
+import random
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
 from PyQt6.QtWidgets import QInputDialog
 from PyQt6.QtGui import QPixmap, QIcon
@@ -12,13 +13,18 @@ from acc_info import *
 from acc_new_or_old import *
 from reg_window import *
 from log_window import *
+from level_window import *
+from work_cmd import *
 from exceptions import *
 from check_funcs import *
 from stylesheets import *
+from questions import *
 
 
 LOGINED = False
 USER_ID = -1
+MODE = None
+HARD_LVL = None
 
 
 def error(exp, self):
@@ -60,15 +66,25 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
         cur = connect.cursor()
         filename = 'acc_icon.png'
         if USER_ID != -1:
-            res = cur.execute("""SELECT filename FROM users
+            res = cur.execute("""SELECT filename, balance FROM users
                                     WHERE id = ?""", (USER_ID,)).fetchall()
+            print(res)
             connect.close()
             if len(res) != 0:
                 filename = res[0][0]
+                self.balance_curr_txt.setText(str(res[0][1]))
         self.acc.setIcon(QIcon(filename))
         self.acc.setIconSize(QSize(50, 50))
         self.acc.clicked.connect(self.info)
         self.go_back.clicked.connect(self.back)
+        self.work_btn.clicked.connect(self.choose_lvl)
+        self.viktorina_btn.clicked.connect(self.play_vikt)
+        self.promo_btn.clicked.connect(self.enter_promo)
+        self.top_btn.clicked.connect(self.open_top)
+        self.slots_btn.clicked.connect(self.choose_lvl)
+        self.kazino_btn.clicked.connect(self.choose_lvl)
+        self.shop_btn.clicked.connect(self.open_shop)
+        self.crash_btn.clicked.connect(self.choose_lvl)
 
     def info(self):
         if not LOGINED:
@@ -88,8 +104,105 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
         self.main_w.show()
         self.close()
 
-    def work(self):
-        pass
+    def choose_lvl(self):
+        global MODE
+        if USER_ID == -1:
+            return
+        self.lvl_w = LvlWindow()
+        self.lvl_w.setStyleSheet(stylesheet_lvl)
+        self.lvl_w.show()
+        self.close()
+        MODE = self.sender().text()
+
+    def open_shop(self):
+        if USER_ID == -1:
+            return
+
+    def open_top(self):
+        if USER_ID == -1:
+            return
+
+    def enter_promo(self):
+        if USER_ID == -1:
+            return
+
+    def play_vikt(self):
+        if USER_ID == -1:
+            return
+
+
+class LvlWindow(QMainWindow, Ui_LevelWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setFixedSize(1920, 1100)
+        self.go_back.clicked.connect(self.back)
+        self.easy.clicked.connect(self.run)
+        self.medium.clicked.connect(self.run)
+        self.hard.clicked.connect(self.run)
+
+    def back(self):
+        self.games_w = ChoiceWindow()
+        self.games_w.setStyleSheet(stylesheet_choice)
+        self.games_w.show()
+        self.close()
+
+    def run(self):
+        global HARD_LVL, MODE
+        HARD_LVL = self.sender().text()
+        if MODE == 'Работать':
+            self.task_w = ProbSolvWindow()
+            self.task_w.setStyleSheet(stylesheet_prob)
+            self.task_w.show()
+        self.close()
+
+
+class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setFixedSize(1920, 1100)
+        self.go_back.clicked.connect(self.back)
+        self.check_btn.clicked.connect(self.check_ans)
+        self.ind = -1
+        self.upd()
+
+    def back(self):
+        self.lvl_w = LvlWindow()
+        self.lvl_w.setStyleSheet(stylesheet_lvl)
+        self.lvl_w.show()
+        self.close()
+
+    def check_ans(self):
+        msg = QMessageBox(self)
+        if self.answ_area.text() == WORK_Q[HARD_LVL.lower().capitalize()][self.ind][1]:
+            add_s = 200
+            if HARD_LVL == 'СРЕДНЯЯ':
+                add_s = 500
+            elif HARD_LVL == 'СЛОЖНАЯ':
+                add_s = 800
+            msg.setIcon(QMessageBox.Icon.Information)
+            msg.setText(f'Верный ответ! Вы заработали: {add_s} монеток!')
+            msg.setWindowTitle("Круто!")
+            connect = sqlite3.connect('users_db.sqlite3')
+            cur = connect.cursor()
+            curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = {USER_ID}""").fetchall()[0][0]
+            cur.execute(f"""UPDATE users SET balance = {add_s + curr_blc} WHERE id = {USER_ID}""")
+            connect.commit()
+            connect.close()
+            self.upd()
+        else:
+            msg.setIcon(QMessageBox.Icon.Critical)
+            msg.setText('Неверный ответ!')
+            msg.setWindowTitle("Жаль!")
+        msg.exec()
+
+    def upd(self):
+        ind2 = self.ind
+        while self.ind == ind2:
+            self.ind = random.randint(0, 14)
+        self.task_txt.setText(WORK_Q[HARD_LVL.lower().capitalize()][self.ind][0])
+        self.answ_area.clear()
 
 
 class LogOrRegWindow(QMainWindow, Ui_LogOrRegWindow):
