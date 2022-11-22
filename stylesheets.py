@@ -61,3 +61,11 @@ stylesheet_prob = """
                 background-position: center;
             }
         """
+
+stylesheet_vikt = """
+            ViktWindow {
+                background-image: url("viktorina.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """
