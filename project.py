@@ -68,17 +68,24 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
         self.setFixedSize(1920, 1100)
         connect = sqlite3.connect('users_db.sqlite3')
         cur = connect.cursor()
-        filename = 'acc_icon.png'
+        file = 'acc_icon.png'
         if USER_ID != -1:
-            res = cur.execute("""SELECT filename, balance FROM users
+            res = cur.execute("""SELECT profile_pic, balance, filename FROM users
                                     WHERE id = ?""", (USER_ID,)).fetchall()[0]
             connect.close()
             if len(res) != 0:
                 if res[0] is not None:
-                    filename = res[0]
+                    file = res[0]
                 if res[1] is not None:
                     self.balance_curr_txt.setText(str(res[1]))
-        self.acc.setIcon(QIcon(filename))
+        if file == 'acc_icon.png':
+            self.acc.setIcon(QIcon(file))
+        else:
+            self.pixmap = QPixmap()
+            self.pixmap.loadFromData(file, res[2].split('.')[-1])
+            self.icon = QIcon()
+            self.icon.addPixmap(self.pixmap)
+            self.acc.setIcon(self.icon)
         self.acc.setIconSize(QSize(50, 50))
         self.acc.clicked.connect(self.info)
         self.go_back.clicked.connect(self.back)
