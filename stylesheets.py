@@ -85,3 +85,11 @@ stylesheet_slot = """
                 background-position: center;
             }
         """
+
+stylesheet_promo = """
+            PromoWindow {
+                background-image: url("promos.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """

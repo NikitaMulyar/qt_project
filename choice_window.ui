@@ -283,7 +283,7 @@ font: 24pt &quot;Verdana&quot;;</string>
         <string>Сделайте ставку и
 попытайте свою удачу -
 главный приз - множитель
-x100!</string>
+x200!</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

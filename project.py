@@ -19,7 +19,8 @@ from check_funcs import *
 from stylesheets import *
 from questions import *
 from sloty import *
-
+from promocodes import *
+from promos import *
 
 LOGINED = False
 USER_ID = -1
@@ -111,6 +112,7 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
     def choose_lvl(self):
         global MODE
         if USER_ID == -1:
+            error('Сначала нужно зарегистрироваться или войти в свой аккаунт!', self)
             return
         self.lvl_w = LvlWindow()
         self.lvl_w.setStyleSheet(stylesheet_lvl)
@@ -120,23 +122,90 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
 
     def open_shop(self):
         if USER_ID == -1:
+            error('Сначала нужно зарегистрироваться или войти в свой аккаунт!', self)
             return
 
     def open_top(self):
         if USER_ID == -1:
+            error('Сначала нужно зарегистрироваться или войти в свой аккаунт!', self)
             return
 
     def enter_promo(self):
         if USER_ID == -1:
+            error('Сначала нужно зарегистрироваться или войти в свой аккаунт!', self)
             return
+        self.promo_w = PromoWindow()
+        self.promo_w.setStyleSheet(stylesheet_promo)
+        self.promo_w.show()
+        self.close()
 
     def play_vikt(self):
         if USER_ID == -1:
+            error('Сначала нужно зарегистрироваться или войти в свой аккаунт!', self)
             return
         self.vikt = ViktWindow()
         self.vikt.setStyleSheet(stylesheet_vikt)
         self.vikt.show()
         self.close()
+
+
+class PromoWindow(QMainWindow, Ui_PromoWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setFixedSize(1920, 1100)
+        self.check_btn_2.clicked.connect(self.run)
+        self.go_back.clicked.connect(self.back)
+
+    def back(self):
+        self.games_w = ChoiceWindow()
+        self.games_w.setStyleSheet(stylesheet_choice)
+        self.games_w.show()
+        self.close()
+
+    def run(self):
+        connect = sqlite3.connect('users_db.sqlite3')
+        cur = connect.cursor()
+        res = cur.execute("""SELECT entered, balance, promocodes FROM users
+                                        WHERE id = ?""", (USER_ID,)).fetchall()[0]
+        summ = random.randint(200, 1000)
+        pr = self.answ_area_2.text()
+        if res[0] is None:
+            if res[2] is None:
+                error('Вы ввели недействительный промокод!', self)
+                return
+            all_promos = res[2].split(';')
+            if pr in all_promos:
+                cur.execute(f"""UPDATE users SET entered = '{pr}', balance = {res[1] + summ} 
+                            WHERE id = {USER_ID}""")
+            else:
+                error('Вы ввели недействительный промокод!', self)
+                return
+        else:
+            all_entered = res[0].split(';')
+            if res[2] is None:
+                error('Вы ввели недействительный промокод!', self)
+                return
+            all_promos = res[2].split(';')
+            if pr in all_promos and pr not in all_entered:
+                all_entered_res = [pr, all_entered] if isinstance(all_entered, str) else \
+                    [pr] + all_entered
+                all_entered_res2 = ";".join(all_entered_res)
+                cur.execute(f"""UPDATE users SET entered = '{all_entered_res2}', balance = 
+        {res[1] + summ} WHERE id = {USER_ID}""")
+            elif pr in all_promos and pr in all_entered:
+                error('Вы вводили этот промокод ранее!', self)
+                return
+            else:
+                error('Вы ввели недействительный промокод!', self)
+                return
+        msg = QMessageBox(self)
+        msg.setIcon(QMessageBox.Icon.Information)
+        msg.setText(f'На ваш баланс зачислено {summ} монеток!')
+        msg.setWindowTitle("Зачисление")
+        msg.exec()
+        connect.commit()
+        connect.close()
 
 
 class ViktWindow(QMainWindow, Ui_ViktWindow):
@@ -165,7 +234,8 @@ class ViktWindow(QMainWindow, Ui_ViktWindow):
             msg.setWindowTitle("Круто!")
             connect = sqlite3.connect('users_db.sqlite3')
             cur = connect.cursor()
-            curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = {USER_ID}""").fetchall()[0][0]
+            curr_blc = \
+                cur.execute(f"""SELECT balance FROM users WHERE id = {USER_ID}""").fetchall()[0][0]
             cur.execute(f"""UPDATE users SET balance = {add_s + curr_blc} WHERE id = {USER_ID}""")
             connect.commit()
             connect.close()
@@ -207,6 +277,7 @@ class KazWindow(QMainWindow, Ui_KazWindow):
         self.curr_txt.setText(str(curr_blc))
         self.stavka_summ.clear()
         self.curr_hard.setText(HARD_LVL)
+        connect.close()
 
     def back(self):
         self.lvl_w = LvlWindow()
@@ -297,6 +368,7 @@ class SlotWindow(QMainWindow, Ui_SlotWindow):
         self.curr_txt.setText(str(curr_blc))
         self.stavka_summ.clear()
         self.curr_hard.setText(HARD_LVL)
+        connect.close()
 
     def back(self):
         self.lvl_w = LvlWindow()
@@ -326,7 +398,7 @@ class SlotWindow(QMainWindow, Ui_SlotWindow):
                     coef = 2
                 elif len(emojis_all) == 2:
                     if emoji1 == emoji2 and emoji4 == emoji3 or \
-                        emoji1 == emoji3 and emoji2 == emoji4 or \
+                            emoji1 == emoji3 and emoji2 == emoji4 or \
                             emoji1 == emoji4 and emoji2 == emoji3:
                         coef = 6
                     else:
@@ -419,6 +491,8 @@ class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
         self.check_btn.clicked.connect(self.check_ans)
         self.ind = -1
         self.upd()
+        self.promo_txt.hide()
+        self.label.hide()
 
     def back(self):
         self.lvl_w = LvlWindow()
@@ -427,6 +501,8 @@ class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
         self.close()
 
     def check_ans(self):
+        self.label.hide()
+        self.promo_txt.hide()
         msg = QMessageBox(self)
         if self.answ_area.text() == WORK_Q[HARD_LVL.lower().capitalize()][self.ind][1]:
             add_s = 100
@@ -434,15 +510,40 @@ class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
                 add_s = 300
             elif HARD_LVL == 'СЛОЖНАЯ':
                 add_s = 600
+            ver = random.randint(0, 2)
+            connect = sqlite3.connect('users_db.sqlite3')
+            cur = connect.cursor()
+            res = cur.execute(f"""SELECT balance, promocodes FROM users WHERE id = 
+{USER_ID}""").fetchall()[0]
+            curr_blc = res[0]
+            user_promos = res[1]
+            if ver == 0:
+                self.label.show()
+                curr_promo = random.choice(CODES)
+                if user_promos is not None:
+                    if isinstance(user_promos, str):
+                        while curr_promo == user_promos:
+                            curr_promo = random.choice(CODES)
+                    else:
+                        while curr_promo in user_promos:
+                            curr_promo = random.choice(CODES)
+                    res1 = ";".join([curr_promo, user_promos] if isinstance(user_promos, str)
+                                    else user_promos + [curr_promo])
+                    cur.execute(f"""UPDATE users SET balance = {add_s + curr_blc},
+                                    promocodes = '{res1}' WHERE id = {USER_ID}""")
+                else:
+                    cur.execute(f"""UPDATE users SET balance = {add_s + curr_blc}, 
+                    promocodes = '{curr_promo}' WHERE id = {USER_ID}""")
+                self.promo_txt.setText(curr_promo)
+                self.promo_txt.show()
+            else:
+                cur.execute(f"""UPDATE users SET balance = {add_s + curr_blc} WHERE id = 
+{USER_ID}""")
+            connect.commit()
+            connect.close()
             msg.setIcon(QMessageBox.Icon.Information)
             msg.setText(f'Верный ответ! Вы заработали: {add_s} монеток!')
             msg.setWindowTitle("Круто!")
-            connect = sqlite3.connect('users_db.sqlite3')
-            cur = connect.cursor()
-            curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = {USER_ID}""").fetchall()[0][0]
-            cur.execute(f"""UPDATE users SET balance = {add_s + curr_blc} WHERE id = {USER_ID}""")
-            connect.commit()
-            connect.close()
             self.upd()
         else:
             msg.setIcon(QMessageBox.Icon.Critical)

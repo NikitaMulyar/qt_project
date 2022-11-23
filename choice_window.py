@@ -243,7 +243,7 @@ class Ui_ChoiceWindow(object):
         self.label_11.setText(_translate("ChoiceWindow", "Сделайте ставку и\n"
 "попытайте свою удачу -\n"
 "главный приз - множитель\n"
-"x100!"))
+"x200!"))
         self.label_14.setText(_translate("ChoiceWindow", "Узнайте, кто сейчас на первом месте!"))
         self.label_13.setText(_translate("ChoiceWindow", "Сделайте ставку и коэффициент - если\n"
 "выпавший коэффициент больше либо\n"
