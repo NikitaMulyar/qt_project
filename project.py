@@ -1,9 +1,10 @@
 import sys
 import random
+from time import sleep
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
 from PyQt6.QtWidgets import QInputDialog
 from PyQt6.QtGui import QPixmap, QIcon
-from PyQt6.QtCore import QSize
+from PyQt6.QtCore import QSize, QTimer
 from main_window import *
 from choice_window import *
 from acc_info import *
@@ -17,13 +18,16 @@ from kazino import *
 from check_funcs import *
 from stylesheets import *
 from questions import *
-import time
+from sloty import *
 
 
 LOGINED = False
 USER_ID = -1
 MODE = None
 HARD_LVL = None
+EMOJIS = ['\U0001F95D', '\U0001F34E', '\U0001F351', '\U0001F34F', '\U0001F350', '\U0001F353',
+          '\U0001F34C', '\U0001F34A', '\U0001F34B', '\U0001F349', '\U0001F347', '\U0001F352',
+          '\U0001F34D', '\U0001F348']
 
 
 def error(exp, self):
@@ -212,14 +216,8 @@ class KazWindow(QMainWindow, Ui_KazWindow):
 
     def run(self):
         try:
-            if '-' not in self.stavka_summ.text() and not self.stavka_summ.text().isdigit() or \
-                    '-' in self.stavka_summ.text() and self.stavka_summ.text()[1:].isdigit():
-                raise NotNumberError
+            check_stavka(self.stavka_summ.text(), USER_ID)
             summ = int(self.stavka_summ.text())
-            if summ < 100 or summ > 10000:
-                raise NotPositiveNumberError
-            if not check_balance(summ, USER_ID):
-                raise BigSummError
             ver = random.randint(0, 10000)
             coef = 1
             if HARD_LVL == 'ЛЕГКАЯ':
@@ -282,6 +280,100 @@ id = {USER_ID}""")
             error(e, self)
 
 
+class SlotWindow(QMainWindow, Ui_SlotWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setFixedSize(1920, 1100)
+        self.go_back.clicked.connect(self.back)
+        self.run_btn.clicked.connect(self.run)
+        self.coef_txt.clear()
+        self.win_txt.clear()
+        self.fruits_txt.clear()
+        connect = sqlite3.connect('users_db.sqlite3')
+        cur = connect.cursor()
+        curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = 
+{USER_ID}""").fetchall()[0][0]
+        self.curr_txt.setText(str(curr_blc))
+        self.stavka_summ.clear()
+        self.curr_hard.setText(HARD_LVL)
+
+    def back(self):
+        self.lvl_w = LvlWindow()
+        self.lvl_w.setStyleSheet(stylesheet_lvl)
+        self.lvl_w.show()
+        self.close()
+
+    def run(self):
+        try:
+            check_stavka(self.stavka_summ.text(), USER_ID)
+            summ = int(self.stavka_summ.text())
+            num = 9
+            if HARD_LVL == 'СРЕДНЯЯ':
+                num = 11
+            elif HARD_LVL == 'СЛОЖНАЯ':
+                num = 13
+            emoji1 = random.randint(0, num)
+            emoji2 = random.randint(0, num)
+            emoji3 = random.randint(0, num)
+            emoji4 = random.randint(0, num)
+            emojis_all = {emoji4, emoji2, emoji3, emoji1}
+            coef = 1
+            if len(emojis_all) == 4:
+                coef = 0
+            if HARD_LVL == 'ЛЕГКАЯ':
+                if len(emojis_all) == 3:
+                    coef = 2
+                elif len(emojis_all) == 2:
+                    if emoji1 == emoji2 and emoji4 == emoji3 or \
+                        emoji1 == emoji3 and emoji2 == emoji4 or \
+                            emoji1 == emoji4 and emoji2 == emoji3:
+                        coef = 6
+                    else:
+                        coef = 10
+                elif len(emojis_all) == 1:
+                    coef = 20
+            elif HARD_LVL == 'СРЕДНЯЯ':
+                if len(emojis_all) == 3:
+                    coef = 3
+                elif len(emojis_all) == 2:
+                    if emoji1 == emoji2 and emoji4 == emoji3 or \
+                            emoji1 == emoji3 and emoji2 == emoji4 or \
+                            emoji1 == emoji4 and emoji2 == emoji3:
+                        coef = 10
+                    else:
+                        coef = 50
+                elif len(emojis_all) == 1:
+                    coef = 80
+            elif HARD_LVL == 'СЛОЖНАЯ':
+                if len(emojis_all) == 3:
+                    coef = 4
+                elif len(emojis_all) == 2:
+                    if emoji1 == emoji2 and emoji4 == emoji3 or \
+                            emoji1 == emoji3 and emoji2 == emoji4 or \
+                            emoji1 == emoji4 and emoji2 == emoji3:
+                        coef = 20
+                    else:
+                        coef = 100
+                elif len(emojis_all) == 1:
+                    coef = 200
+            self.fruits_txt.setText(f'=={EMOJIS[emoji1]}{EMOJIS[emoji2]}{EMOJIS[emoji3]}\
+{EMOJIS[emoji4]}==')
+            self.coef_txt.setText(f'x{str(coef)}')
+            self.win_txt.setText(str(summ * coef))
+            connect = sqlite3.connect('users_db.sqlite3')
+            cur = connect.cursor()
+            curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = 
+            {USER_ID}""").fetchall()[0][0]
+            cur.execute(f"""UPDATE users SET balance = {int(curr_blc + summ * coef - summ)} WHERE 
+id = {USER_ID}""")
+            connect.commit()
+            connect.close()
+            self.curr_txt.setText(str(int(curr_blc + summ * coef - summ)))
+        except Exception as e:
+            error(e, self)
+
+
 class LvlWindow(QMainWindow, Ui_LevelWindow):
     def __init__(self):
         super().__init__()
@@ -309,6 +401,12 @@ class LvlWindow(QMainWindow, Ui_LevelWindow):
             self.kaz_w = KazWindow()
             self.kaz_w.setStyleSheet(stylesheet_kaz)
             self.kaz_w.show()
+        elif MODE == 'Слоты':
+            self.slot_w = SlotWindow()
+            self.slot_w.setStyleSheet(stylesheet_slot)
+            self.slot_w.show()
+        elif MODE == 'Краш-казино':
+            pass
         self.close()
 
 

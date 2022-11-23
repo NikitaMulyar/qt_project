@@ -105,6 +105,9 @@ color: rgb(128, 0, 2);</string>
          <height>70</height>
         </size>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">font: 75 24pt &quot;Helvetica&quot;;
 background-color: rgb(253, 128, 8);

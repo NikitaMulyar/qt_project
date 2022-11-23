@@ -79,3 +79,14 @@ def check_balance(stavka, id):
     result = cur.execute(f"""SELECT balance FROM users WHERE id = {id}""").fetchall()[0][0]
     connect.close()
     return result >= stavka
+
+
+def check_stavka(stavka, id):
+    if '-' not in stavka and not stavka.isdigit() or \
+            '-' in stavka and stavka[1:].isdigit():
+        raise NotNumberError
+    summ = int(stavka)
+    if summ < 100 or summ > 10000:
+        raise NotPositiveNumberError
+    if not check_balance(summ, id):
+        raise BigSummError

@@ -77,3 +77,11 @@ stylesheet_kaz = """
                 background-position: center;
             }
         """
+
+stylesheet_slot = """
+            SlotWindow {
+                background-image: url("sloty.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """

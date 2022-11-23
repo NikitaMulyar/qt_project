@@ -23,6 +23,7 @@ class Ui_ViktWindow(object):
         self.gridLayout.setObjectName("gridLayout")
         self.tip_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.tip_btn.setMinimumSize(QtCore.QSize(300, 70))
+        self.tip_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.tip_btn.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")
@@ -30,6 +31,7 @@ class Ui_ViktWindow(object):
         self.gridLayout.addWidget(self.tip_btn, 1, 4, 1, 1)
         self.check_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.check_btn.setMinimumSize(QtCore.QSize(300, 70))
+        self.check_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.check_btn.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")

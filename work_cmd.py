@@ -50,6 +50,7 @@ class Ui_ProbSolvWindow(object):
         self.gridLayout.addWidget(self.answ_area, 1, 1, 1, 1)
         self.check_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.check_btn.setMinimumSize(QtCore.QSize(300, 70))
+        self.check_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.check_btn.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")
