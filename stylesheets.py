@@ -93,3 +93,11 @@ stylesheet_promo = """
                 background-position: center;
             }
         """
+
+stylesheet_crash = """
+            CrashKazWindow {
+                background-image: url("crash.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """

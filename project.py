@@ -1,6 +1,5 @@
 import sys
 import random
-from time import sleep
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
 from PyQt6.QtWidgets import QInputDialog
 from PyQt6.QtGui import QPixmap, QIcon
@@ -21,6 +20,8 @@ from questions import *
 from sloty import *
 from promocodes import *
 from promos import *
+from crash import *
+
 
 LOGINED = False
 USER_ID = -1
@@ -485,8 +486,115 @@ class LvlWindow(QMainWindow, Ui_LevelWindow):
             self.slot_w.setStyleSheet(stylesheet_slot)
             self.slot_w.show()
         elif MODE == 'Краш-казино':
-            pass
+            self.crash_w = CrashKazWindow()
+            self.crash_w.setStyleSheet(stylesheet_crash)
+            self.crash_w.show()
         self.close()
+
+
+class CrashKazWindow(QMainWindow, Ui_CrashKazWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setFixedSize(1920, 1100)
+        self.go_back.clicked.connect(self.back)
+        self.run_btn.clicked.connect(self.run)
+        self.end_btn.clicked.connect(self.end)
+        self.coef_txt.clear()
+        self.win_txt.clear()
+        connect = sqlite3.connect('users_db.sqlite3')
+        cur = connect.cursor()
+        curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = 
+{USER_ID}""").fetchall()[0][0]
+        self.curr_txt.setText(str(curr_blc))
+        self.stavka_summ.clear()
+        self.curr_hard.setText(HARD_LVL)
+        connect.close()
+        self.started = False
+        self.curr_coef = 1.0
+        self.stavka_summ.setEnabled(True)
+        self.n = 0
+
+    def back(self):
+        if self.started:
+            error('Вы не завершили игру!', self)
+            return
+        self.lvl_w = LvlWindow()
+        self.lvl_w.setStyleSheet(stylesheet_lvl)
+        self.lvl_w.show()
+        self.close()
+
+    def run(self):
+        try:
+            check_stavka(self.stavka_summ.text(), USER_ID)
+            ver = random.randint(0, 1000)
+            coef = 0
+            tmp = self.coef_txt.text()
+            if tmp != '':
+                if HARD_LVL == 'ЛЕГКАЯ':
+                    if ver < 700:
+                        coef = random.randint(5, 10) / 100
+                    elif ver < 997:
+                        coef = -1 * random.randint(1, 5) / 100
+                elif HARD_LVL == 'СРЕДНЯЯ':
+                    if ver < 500:
+                        coef = random.randint(10, 20) / 100
+                    elif ver < 997:
+                        coef = -1 * random.randint(1, 10) / 100
+                elif HARD_LVL == 'СЛОЖНАЯ':
+                    if ver < 300:
+                        coef = random.randint(20, 30) / 100
+                    elif ver < 997:
+                        coef = -1 * random.randint(5, 15) / 100
+                if ver >= 998:
+                    coef = -1000000000
+            old_coef = round(self.curr_coef, 2)
+            new_coef = round(self.curr_coef + coef, 2)
+            self.curr_coef = new_coef
+            if new_coef < old_coef:
+                self.coef_txt.setText(f'x{str(new_coef)} (\U0001F4C9-x{str(old_coef - new_coef)[:4]})')
+            else:
+                self.coef_txt.setText(f'x{str(new_coef)} (\U0001F4C8+x{str(new_coef - old_coef)[:4]})')
+            if self.curr_coef <= 0:
+                self.started = False
+                self.coef_txt.clear()
+                self.win_txt.clear()
+                self.stavka_summ.setEnabled(True)
+                self.curr_coef = 1
+                self.n = 0
+                error('Игра заверешена, т.к. коэффициент опустился или стал равен 0.', self)
+                return
+            self.started = True
+            self.stavka_summ.setEnabled(False)
+            self.n += 1
+        except Exception as e:
+            error(e, self)
+
+    def end(self):
+        if self.n == 1:
+            error('Нельзя завершать игру на первом шаге!', self)
+            return
+        if not self.started:
+            return
+        try:
+            summ = int(self.stavka_summ.text())
+            coef = self.curr_coef
+            self.win_txt.setText(str(summ * coef))
+            connect = sqlite3.connect('users_db.sqlite3')
+            cur = connect.cursor()
+            curr_blc = cur.execute(f"""SELECT balance FROM users WHERE id = 
+                    {USER_ID}""").fetchall()[0][0]
+            cur.execute(f"""UPDATE users SET balance = {int(curr_blc + summ * coef - summ)} WHERE 
+        id = {USER_ID}""")
+            connect.commit()
+            connect.close()
+            self.curr_txt.setText(str(int(curr_blc + summ * coef - summ)))
+            self.started = False
+            self.stavka_summ.setEnabled(True)
+            self.curr_coef = 1.0
+            self.n = 0
+        except Exception as e:
+            error(e, self)
 
 
 class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
