@@ -101,3 +101,11 @@ stylesheet_crash = """
                 background-position: center;
             }
         """
+
+stylesheet_top = """
+            TopWindow {
+                background-image: url("top.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """
