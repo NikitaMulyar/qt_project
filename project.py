@@ -3,7 +3,8 @@ import random
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
 from PyQt6.QtWidgets import QInputDialog, QTableWidgetItem, QDialog, QDialogButtonBox, QVBoxLayout
 from PyQt6.QtGui import QPixmap, QIcon, QColor
-from PyQt6.QtCore import QSize
+from PyQt6.QtCore import QSize, QUrl
+from PyQt6.QtMultimedia import QAudioOutput, QMediaPlayer
 from main_window import *
 from choice_window import *
 from acc_info import *
@@ -1425,4 +1426,10 @@ if __name__ == '__main__':
     ex = MainWindow()
     ex.setStyleSheet(stylesheet_main)
     ex.show()
+    player = QMediaPlayer()
+    audio_output = QAudioOutput()
+    player.setAudioOutput(audio_output)
+    player.setSource(QUrl.fromLocalFile("music.mp3"))
+    audio_output.setVolume(0.1)
+    player.play()
     sys.exit(app.exec())
