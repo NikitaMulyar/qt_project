@@ -303,6 +303,27 @@ border-top-color: rgb(0, 0, 0);
        </property>
       </widget>
      </item>
+     <item row="4" column="6">
+      <widget class="QPushButton" name="open_invent">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(47, 106, 255, 194);
+font: 24pt &quot;Courier&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Инвентарь</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">

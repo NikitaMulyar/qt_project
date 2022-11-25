@@ -99,7 +99,7 @@ class Ui_ProbSolvWindow(object):
 
     def retranslateUi(self, ProbSolvWindow):
         _translate = QtCore.QCoreApplication.translate
-        ProbSolvWindow.setWindowTitle(_translate("ProbSolvWindow", "MainWindow"))
+        ProbSolvWindow.setWindowTitle(_translate("ProbSolvWindow", "Пора работать!"))
         self.go_back.setText(_translate("ProbSolvWindow", "Назад"))
         self.label_2.setText(_translate("ProbSolvWindow", "Ответ:"))
         self.answ_area.setText(_translate("ProbSolvWindow", "12345"))

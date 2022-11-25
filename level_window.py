@@ -84,7 +84,7 @@ class Ui_LevelWindow(object):
 
     def retranslateUi(self, LevelWindow):
         _translate = QtCore.QCoreApplication.translate
-        LevelWindow.setWindowTitle(_translate("LevelWindow", "MainWindow"))
+        LevelWindow.setWindowTitle(_translate("LevelWindow", "Выберите сложность"))
         self.medium.setText(_translate("LevelWindow", "СРЕДНЯЯ"))
         self.hard.setText(_translate("LevelWindow", "СЛОЖНАЯ"))
         self.easy.setText(_translate("LevelWindow", "ЛЕГКАЯ"))

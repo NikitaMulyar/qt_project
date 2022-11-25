@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Активация промокода</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="go_back">

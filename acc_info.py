@@ -133,6 +133,14 @@ class Ui_AccWindow(object):
 "")
         self.psw_txt.setObjectName("psw_txt")
         self.gridLayout.addWidget(self.psw_txt, 2, 3, 1, 2)
+        self.open_invent = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.open_invent.setMinimumSize(QtCore.QSize(0, 90))
+        self.open_invent.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.open_invent.setStyleSheet("background-color: rgba(47, 106, 255, 194);\n"
+"font: 24pt \"Courier\";\n"
+"color: rgb(0, 0, 0);")
+        self.open_invent.setObjectName("open_invent")
+        self.gridLayout.addWidget(self.open_invent, 4, 6, 1, 1)
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(240, 650, 1570, 281))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
@@ -235,6 +243,7 @@ class Ui_AccWindow(object):
         self.label_6.setText(_translate("AccWindow", "Баланс"))
         self.psw_btn.setText(_translate("AccWindow", "Показать/Скрыть"))
         self.psw_txt.setText(_translate("AccWindow", "***"))
+        self.open_invent.setText(_translate("AccWindow", "Инвентарь"))
         self.label_11.setText(_translate("AccWindow", "Действия"))
         self.change_psw_btn.setText(_translate("AccWindow", "Сменить пароль"))
         self.change_name_btn.setText(_translate("AccWindow", "Сменить юзернейм"))

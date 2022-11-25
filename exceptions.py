@@ -62,7 +62,7 @@ class LenNameError(UsernameError):
 
 class NotPositiveNumberError(SummError):
     def __str__(self):
-        return 'Сумма ставки должна быть от 100 до 10000!'
+        return 'Сумма ставки должна быть от 100 до 100000!'
 
 
 class NotNumberError(SummError):
@@ -73,3 +73,8 @@ class NotNumberError(SummError):
 class BigSummError(SummError):
     def __str__(self):
         return 'Сумма ставки должна быть меньше либо равна сумме баланса!'
+
+
+class SmallBalanceError(SummError):
+    def __str__(self):
+        return 'Не хватает денег для покупки товара!'

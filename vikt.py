@@ -85,7 +85,7 @@ class Ui_ViktWindow(object):
 
     def retranslateUi(self, ViktWindow):
         _translate = QtCore.QCoreApplication.translate
-        ViktWindow.setWindowTitle(_translate("ViktWindow", "MainWindow"))
+        ViktWindow.setWindowTitle(_translate("ViktWindow", "Викторина"))
         self.tip_btn.setText(_translate("ViktWindow", "ПОДСКАЗКА"))
         self.check_btn.setText(_translate("ViktWindow", "ПРОВЕРИТЬ!"))
         self.answ_area.setText(_translate("ViktWindow", "12345"))

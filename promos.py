@@ -70,7 +70,7 @@ class Ui_PromoWindow(object):
 
     def retranslateUi(self, PromoWindow):
         _translate = QtCore.QCoreApplication.translate
-        PromoWindow.setWindowTitle(_translate("PromoWindow", "MainWindow"))
+        PromoWindow.setWindowTitle(_translate("PromoWindow", "Активация промокода"))
         self.go_back.setText(_translate("PromoWindow", "Назад"))
         self.answ_area_2.setText(_translate("PromoWindow", "12345"))
         self.label_3.setText(_translate("PromoWindow", "Введите промокод:"))

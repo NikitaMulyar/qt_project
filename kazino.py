@@ -115,7 +115,7 @@ class Ui_KazWindow(object):
 
     def retranslateUi(self, KazWindow):
         _translate = QtCore.QCoreApplication.translate
-        KazWindow.setWindowTitle(_translate("KazWindow", "MainWindow"))
+        KazWindow.setWindowTitle(_translate("KazWindow", "Казино"))
         self.run_btn.setText(_translate("KazWindow", "ПОПЫТАЕМ УДАЧУ!"))
         self.label_2.setText(_translate("KazWindow", "Ваша ставка:"))
         self.task_txt_3.setText(_translate("KazWindow", "Сумма выигрыша:"))

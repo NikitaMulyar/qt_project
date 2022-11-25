@@ -103,7 +103,7 @@ class Ui_TopWindow(object):
 
     def retranslateUi(self, TopWindow):
         _translate = QtCore.QCoreApplication.translate
-        TopWindow.setWindowTitle(_translate("TopWindow", "MainWindow"))
+        TopWindow.setWindowTitle(_translate("TopWindow", "Топы"))
         self.go_back.setText(_translate("TopWindow", "Назад"))
         self.tableTop.setTabText(self.tableTop.indexOf(self.tab), _translate("TopWindow", "По балансам"))
         self.tableTop.setTabText(self.tableTop.indexOf(self.tab_2), _translate("TopWindow", "По отвеченным вопросам в викторине"))

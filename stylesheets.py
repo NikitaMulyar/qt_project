@@ -109,3 +109,19 @@ stylesheet_top = """
                 background-position: center;
             }
         """
+
+stylesheet_shop = """
+            ShopWindow {
+                background-image: url("shop.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """
+
+stylesheet_invent = """
+            InventWindow {
+                background-image: url("invent.png"); 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        """

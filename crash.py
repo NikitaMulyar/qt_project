@@ -121,7 +121,7 @@ class Ui_CrashKazWindow(object):
 
     def retranslateUi(self, CrashKazWindow):
         _translate = QtCore.QCoreApplication.translate
-        CrashKazWindow.setWindowTitle(_translate("CrashKazWindow", "MainWindow"))
+        CrashKazWindow.setWindowTitle(_translate("CrashKazWindow", "Краш-казино"))
         self.go_back.setText(_translate("CrashKazWindow", "Назад"))
         self.coef_txt.setText(_translate("CrashKazWindow", "x0.12"))
         self.curr_txt.setText(_translate("CrashKazWindow", "999"))

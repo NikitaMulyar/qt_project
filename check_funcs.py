@@ -32,6 +32,7 @@ for i in mac1:
     cnt = 1
 
 
+# === Ф-ИЯ ПРОВЕРКИ ПАРОЛЯ ===
 def check_password(psw, old=''):
     if old != '' and psw == old:
         raise CurrPswError
@@ -44,6 +45,7 @@ def check_password(psw, old=''):
             break
     else:
         raise DigitError
+    # Проверим пароль на подряд идущие символы
     for i in range(len(psw) - 4):
         if psw[i].isalpha() and psw[i + 1].isalpha() and psw[i + 2].isalpha():
             if pc[psw[i + 2].lower()] - pc[psw[i + 1].lower()] == \
@@ -59,6 +61,7 @@ def check_password(psw, old=''):
         raise NotAlphaAndDigitError
 
 
+# === Ф-ИЯ ПРОВЕРКИ ЮЗЕРНЕЙМА ===
 def check_name(name, old=''):
     if old != '' and old == name:
         raise CurrError
@@ -73,6 +76,7 @@ def check_name(name, old=''):
         raise UsedError
 
 
+# === Ф-ИЯ ПРОВЕРКИ БАЛАНСА ===
 def check_balance(stavka, id):
     connect = sqlite3.connect('users_db.sqlite3')
     cur = connect.cursor()
@@ -81,12 +85,27 @@ def check_balance(stavka, id):
     return result >= stavka
 
 
+# === Ф-ИЯ ПРОВЕРКИ СТАВКИ ===
 def check_stavka(stavka, id):
     if '-' not in stavka and not stavka.isdigit() or \
             '-' in stavka and stavka[1:].isdigit():
         raise NotNumberError
     summ = int(stavka)
-    if summ < 100 or summ > 10000:
+    if summ < 100 or summ > 100000:
         raise NotPositiveNumberError
     if not check_balance(summ, id):
         raise BigSummError
+
+
+# === Ф-ИЯ ПРОВЕРКИ НАЛИЧИЯ ПРЕМИУМА ===
+def check_premium(invent):
+    if invent is None:
+        return 1
+    else:
+        invent1 = invent.split(';')
+        if isinstance(invent1, list):
+            if '1' in invent1:
+                return 1.5
+        elif isinstance(invent1, str):
+            if invent1 == '1':
+                return 1.5

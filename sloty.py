@@ -126,7 +126,7 @@ class Ui_SlotWindow(object):
 
     def retranslateUi(self, SlotWindow):
         _translate = QtCore.QCoreApplication.translate
-        SlotWindow.setWindowTitle(_translate("SlotWindow", "MainWindow"))
+        SlotWindow.setWindowTitle(_translate("SlotWindow", "Слоты"))
         self.go_back.setText(_translate("SlotWindow", "Назад"))
         self.label_2.setText(_translate("SlotWindow", "Ваша ставка:"))
         self.stavka_summ.setText(_translate("SlotWindow", "99999999999999"))
