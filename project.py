@@ -1431,5 +1431,6 @@ if __name__ == '__main__':
     player.setAudioOutput(audio_output)
     player.setSource(QUrl.fromLocalFile("music.mp3"))
     audio_output.setVolume(0.1)
+    player.setLoops(999)
     player.play()
     sys.exit(app.exec())
