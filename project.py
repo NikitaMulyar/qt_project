@@ -54,7 +54,8 @@ def append_user(name, psw):
     cursor = connect.cursor()
     cursor.execute(f"INSERT INTO users(username, password, balance) VALUES('{name}', '{psw}', 0)")
     connect.commit()
-    id = cursor.execute("SELECT id FROM users").fetchall()[-1][-1]
+    id = cursor.execute(f"""SELECT id FROM users WHERE username = '{name}' and
+password = '{psw}'""").fetchall()[-1][-1]
     connect.close()
     return id
 
