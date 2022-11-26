@@ -2,6 +2,7 @@ import sys
 import random
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
 from PyQt6.QtWidgets import QInputDialog, QTableWidgetItem, QDialog, QDialogButtonBox, QVBoxLayout
+from PyQt6.QtWidgets import QWidget
 from PyQt6.QtGui import QPixmap, QIcon, QColor
 from PyQt6.QtCore import QSize, QUrl
 from PyQt6.QtMultimedia import QAudioOutput, QMediaPlayer
@@ -581,6 +582,16 @@ class ViktWindow(QMainWindow, Ui_ViktWindow):
         ind2 = self.ind
         while self.ind == ind2:
             self.ind = random.randint(1, 72)
+        self.ind = random.choice([33, 44, 56, 57, 66, 70])
+        if self.ind in PHOTOS_VIKT:
+            self.image_w = QWidget()
+            self.image = QLabel(self.image_w)
+            self.image.setPixmap(QPixmap(PHOTOS_VIKT[self.ind]))
+            self.image.move(0, 0)
+            self.image.resize(self.image.sizeHint())
+            self.image_w.resize(self.image.sizeHint())
+            self.image_w.show()
+            self.image_w.move(0, 0)
         self.task_txt.setText(VIKT_Q[self.ind])
         self.answ_area.clear()
 
