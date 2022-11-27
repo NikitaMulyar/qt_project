@@ -431,7 +431,7 @@ profile_pic, filename FROM users""").fetchall()
             self.tableMyTop.setColumnCount(6)
             self.tableMyTop.setRowCount(0)
             self.tableMyTop.setHorizontalHeaderLabels(['Аватарка', 'ID', 'Имя', 'Баланс',
-                                                          'Вопросы', 'Загадки'])
+                                                       'Вопросы', 'Загадки'])
             set_table(self.itog, self.tableMyTop)
         except Exception as e:
             error(f'Возникла ошибка: {e}. Перепроверьте запрос.', self)
@@ -478,7 +478,7 @@ class PromoWindow(QMainWindow, Ui_PromoWindow):
                 error('Вы ввели недействительный промокод!', self)
                 return
             all_promos = res[2].split(';')
-            # Проверяем, есть ли промокод в введенных
+            # Проверяем, есть ли промокод во введенных
             if pr in all_promos:
                 # res[1] - баланс, res[2] - все полученные промокоды
                 cur.execute(f"""UPDATE users SET entered = '{pr}', balance = {res[1] + summ} 
@@ -626,7 +626,7 @@ class KazWindow(QMainWindow, Ui_KazWindow):
     # === Ф-ИЯ ВЫВОДА КОЭФФ. И ПОПОЛНЕНИЯ БАЛАНСА ===
     def run(self):
         try:
-            # Получаем баланс и инвентарий юзера
+            # Получаем баланс и инвентарь юзера
             data = get_balance_and_premium_coef()
             curr_blc = data[0]
             invent1 = data[-1]
@@ -875,7 +875,7 @@ class CrashKazWindow(QMainWindow, Ui_CrashKazWindow):
                 self.stavka_summ.setEnabled(True)
                 self.curr_coef = 1
                 self.n = 0
-                error('Игра заверешена, т.к. коэффициент опустился или стал равен 0.', self)
+                error('Игра завершена, т.к. коэффициент опустился или стал равен 0.', self)
                 self.end()
                 return
             self.started = True
@@ -961,7 +961,7 @@ class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
             if ver == 0:
                 self.label.show()
                 curr_promo = random.choice(CODES)
-                # Если юзер удачливый, он получит промокод :>
+                # Если юзер удачливый, то он получит промокод :>
                 if user_promos is not None:
                     # Проверяем тип переменной, от чего зависит способ добавления в БД нового
                     # промокода
