@@ -160,9 +160,9 @@ color: rgb(217, 5, 7);</string>
    <widget class="QLabel" name="promo_txt">
     <property name="geometry">
      <rect>
-      <x>910</x>
+      <x>1060</x>
       <y>980</y>
-      <width>451</width>
+      <width>371</width>
       <height>61</height>
      </rect>
     </property>

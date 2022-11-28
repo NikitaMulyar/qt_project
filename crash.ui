@@ -209,7 +209,7 @@ font: 20pt &quot;Tahoma&quot;;</string>
      <rect>
       <x>1360</x>
       <y>10</y>
-      <width>241</width>
+      <width>311</width>
       <height>31</height>
      </rect>
     </property>
@@ -224,9 +224,9 @@ font: 20pt &quot;Tahoma&quot;;</string>
    <widget class="QLabel" name="curr_hard">
     <property name="geometry">
      <rect>
-      <x>1600</x>
+      <x>1670</x>
       <y>0</y>
-      <width>291</width>
+      <width>221</width>
       <height>50</height>
      </rect>
     </property>

@@ -282,7 +282,8 @@ border-top-color: rgb(0, 0, 0);
 color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>Показать/Скрыть</string>
+        <string>Показать/
+Скрыть</string>
        </property>
        <property name="iconSize">
         <size>
@@ -472,7 +473,7 @@ background-color: rgba(255, 255, 255, 64);
 font: 20pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
-          <string>Установить аватарку</string>
+          <string>Поставить аватарку</string>
          </property>
         </widget>
        </item>

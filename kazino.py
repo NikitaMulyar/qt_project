@@ -91,16 +91,16 @@ class Ui_KazWindow(object):
 "background-color: rgb(254, 204, 102);\n"
 "")
         self.go_back.setObjectName("go_back")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(1370, 10, 241, 31))
-        self.label.setStyleSheet("color: rgb(0, 0, 0);\n"
-"font: 20pt \"Tahoma\";")
-        self.label.setObjectName("label")
         self.curr_hard = QtWidgets.QLabel(self.centralwidget)
-        self.curr_hard.setGeometry(QtCore.QRect(1610, 0, 291, 50))
+        self.curr_hard.setGeometry(QtCore.QRect(1690, 0, 221, 50))
         self.curr_hard.setStyleSheet("font: 20pt \"Courier\";\n"
 "color: rgb(128, 0, 2);")
         self.curr_hard.setObjectName("curr_hard")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(1380, 10, 311, 31))
+        self.label.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Tahoma\";")
+        self.label.setObjectName("label")
         KazWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(KazWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1920, 24))
@@ -126,5 +126,5 @@ class Ui_KazWindow(object):
         self.win_txt.setText(_translate("KazWindow", "99"))
         self.curr_txt.setText(_translate("KazWindow", "999"))
         self.go_back.setText(_translate("KazWindow", "Назад"))
-        self.label.setText(_translate("KazWindow", "Текущая сложность:"))
         self.curr_hard.setText(_translate("KazWindow", "None"))
+        self.label.setText(_translate("KazWindow", "Текущая сложность:"))

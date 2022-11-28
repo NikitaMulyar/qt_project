@@ -74,7 +74,7 @@ class Ui_ProbSolvWindow(object):
 "color: rgb(217, 5, 7);")
         self.label.setObjectName("label")
         self.promo_txt = QtWidgets.QLabel(self.centralwidget)
-        self.promo_txt.setGeometry(QtCore.QRect(910, 980, 451, 61))
+        self.promo_txt.setGeometry(QtCore.QRect(1060, 980, 371, 61))
         font = QtGui.QFont()
         font.setFamily("Courier")
         font.setPointSize(30)

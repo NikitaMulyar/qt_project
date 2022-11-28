@@ -90,12 +90,12 @@ class Ui_CrashKazWindow(object):
         self.stavka_summ.setObjectName("stavka_summ")
         self.gridLayout.addWidget(self.stavka_summ, 3, 1, 1, 3)
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(1360, 10, 241, 31))
+        self.label.setGeometry(QtCore.QRect(1360, 10, 311, 31))
         self.label.setStyleSheet("color: rgb(0, 0, 0);\n"
 "font: 20pt \"Tahoma\";")
         self.label.setObjectName("label")
         self.curr_hard = QtWidgets.QLabel(self.centralwidget)
-        self.curr_hard.setGeometry(QtCore.QRect(1600, 0, 291, 50))
+        self.curr_hard.setGeometry(QtCore.QRect(1670, 0, 221, 50))
         self.curr_hard.setStyleSheet("font: 20pt \"Courier\";\n"
 "color: rgb(128, 0, 2);")
         self.curr_hard.setObjectName("curr_hard")

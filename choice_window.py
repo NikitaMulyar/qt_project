@@ -24,7 +24,7 @@ class Ui_ChoiceWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
-        spacerItem = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(100, 20, QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Minimum)
         self.gridLayout.addItem(spacerItem, 0, 2, 1, 1)
         self.top_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.top_btn.setMinimumSize(QtCore.QSize(150, 50))
@@ -37,7 +37,7 @@ class Ui_ChoiceWindow(object):
         self.label_7 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_7.setMaximumSize(QtCore.QSize(200, 50))
         self.label_7.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 30pt \"Arial Black\";\n"
+"font: 28pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_7.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_7.setObjectName("label_7")
@@ -60,7 +60,7 @@ class Ui_ChoiceWindow(object):
         self.gridLayout.addWidget(self.crash_btn, 1, 3, 1, 1)
         self.label_8 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_8.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 30pt \"Arial Black\";\n"
+"font: 28pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_8.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_8.setObjectName("label_8")
@@ -68,14 +68,14 @@ class Ui_ChoiceWindow(object):
         self.label_6 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_6.setMaximumSize(QtCore.QSize(200, 50))
         self.label_6.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 30pt \"Arial Black\";\n"
+"font: 28pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_6.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.gridLayout.addWidget(self.label_6, 0, 0, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_5.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 30pt \"Arial Black\";\n"
+"font: 28pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_5.setObjectName("label_5")
@@ -147,7 +147,7 @@ class Ui_ChoiceWindow(object):
         self.label_15.setObjectName("label_15")
         self.gridLayout.addWidget(self.label_15, 3, 4, 1, 1)
         self.slots_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.slots_btn.setMinimumSize(QtCore.QSize(150, 50))
+        self.slots_btn.setMinimumSize(QtCore.QSize(250, 50))
         self.slots_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.slots_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
@@ -162,7 +162,7 @@ class Ui_ChoiceWindow(object):
         self.label_16.setObjectName("label_16")
         self.gridLayout.addWidget(self.label_16, 4, 1, 1, 1)
         self.promo_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.promo_btn.setMinimumSize(QtCore.QSize(150, 50))
+        self.promo_btn.setMinimumSize(QtCore.QSize(250, 50))
         self.promo_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.promo_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"

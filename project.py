@@ -582,7 +582,6 @@ class ViktWindow(QMainWindow, Ui_ViktWindow):
         ind2 = self.ind
         while self.ind == ind2:
             self.ind = random.randint(1, 72)
-        self.ind = random.choice([33, 44, 56, 57, 66, 70])
         if self.ind in PHOTOS_VIKT:
             self.image_w = QWidget()
             self.image = QLabel(self.image_w)
