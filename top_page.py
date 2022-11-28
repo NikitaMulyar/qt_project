@@ -27,7 +27,7 @@ class Ui_TopWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
 "")
@@ -35,9 +35,7 @@ class Ui_TopWindow(object):
         self.tableTop = QtWidgets.QTabWidget(self.centralwidget)
         self.tableTop.setGeometry(QtCore.QRect(9, 169, 1491, 811))
         self.tableTop.setMinimumSize(QtCore.QSize(0, 801))
-        self.tableTop.setStyleSheet("font: 24pt \"Georgia\";\n"
-"background-color: rgba(0, 0, 0, 0);\n"
-"color: rgb(0, 0, 0);")
+        self.tableTop.setStyleSheet("font: 20pt \"Georgia\";")
         self.tableTop.setObjectName("tableTop")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
@@ -74,18 +72,17 @@ class Ui_TopWindow(object):
         self.request_txt = QtWidgets.QTextEdit(self.centralwidget)
         self.request_txt.setGeometry(QtCore.QRect(1510, 430, 391, 391))
         self.request_txt.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.CursorShape.IBeamCursor))
-        self.request_txt.setStyleSheet("font: 18pt \"Courier\";")
+        self.request_txt.setStyleSheet("font: 16pt \"Courier\";")
         self.request_txt.setObjectName("request_txt")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(1510, 180, 391, 251))
-        self.label.setStyleSheet("font: 20pt \"Symbol\";\n"
-"color: rgb(0, 0, 0);\n"
-"")
+        self.label.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 16pt \"Tahoma\";")
         self.label.setObjectName("label")
         self.search_btn = QtWidgets.QPushButton(self.centralwidget)
         self.search_btn.setGeometry(QtCore.QRect(1570, 830, 291, 61))
         self.search_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.search_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.search_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "background-color: rgb(207, 101, 6);")
         self.search_btn.setObjectName("search_btn")
         TopWindow.setCentralWidget(self.centralwidget)
@@ -98,7 +95,7 @@ class Ui_TopWindow(object):
         TopWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(TopWindow)
-        self.tableTop.setCurrentIndex(0)
+        self.tableTop.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(TopWindow)
 
     def retranslateUi(self, TopWindow):
@@ -112,10 +109,10 @@ class Ui_TopWindow(object):
         self.request_txt.setHtml(_translate("TopWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Courier\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">а</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">а</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">аапппву4</p></body></html>"))
+"</style></head><body style=\" font-family:\'Courier\'; font-size:16pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">а</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">а</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">аапппву4</span></p></body></html>"))
         self.label.setText(_translate("TopWindow", "Выберите стандартный топ из\n"
 "предложенных либо выберите\n"
 "\"Свой топ\" и введите критерий\n"

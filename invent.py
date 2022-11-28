@@ -22,7 +22,7 @@ class Ui_InventWindow(object):
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.label_3 = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.label_3.setStyleSheet("font: 36pt bold \"Arial\";\n"
+        self.label_3.setStyleSheet("font: 30pt bold \"Arial\";\n"
 "color: rgb(0, 0, 0);\n"
 "")
         self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -42,7 +42,7 @@ class Ui_InventWindow(object):
         self.close_window.setMaximumSize(QtCore.QSize(1000000, 16777215))
         self.close_window.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.close_window.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.close_window.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.close_window.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);")
         self.close_window.setObjectName("close_window")

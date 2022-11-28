@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.pushButton.setMinimumSize(QtCore.QSize(400, 150))
         self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.pushButton.setStyleSheet("font: 48pt \"Helvetica\";\n"
+        self.pushButton.setStyleSheet("font: 40pt \"Helvetica\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgba(253, 128, 8, 200);")
         self.pushButton.setObjectName("pushButton")

@@ -1246,7 +1246,7 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         places = set_lists(res)[3:]
         # Из УНИВЕРСАЛЬНОГО КОРТЕЖА))) берем данные о местах в топе юзера
         self.place_txt.setText(f'Место среди балансов: #{places[0]}\nСреди решенных загадок: \
-#{places[1]}\nСреди ответов на вопросы в викторине: #{places[2]}')
+#{places[1]}\nСреди ответов на вопросы\nв викторине: #{places[2]}')
 
     # === Ф-ИЯ ОТКРЫТИЯ ИНВЕНТАРЯ ===
     def open(self):

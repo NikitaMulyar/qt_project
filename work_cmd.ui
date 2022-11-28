@@ -51,7 +51,7 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+     <string notr="true">font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);
 </string>
@@ -73,7 +73,7 @@ background-color: rgb(254, 204, 102);
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Symbol&quot;;
+        <string notr="true">font: 20pt &quot;Tahoma&quot;;
 color: rgb(128, 0, 2);</string>
        </property>
        <property name="text">
@@ -90,7 +90,7 @@ color: rgb(128, 0, 2);</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: italic 24pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: italic 20pt &quot;Times New Roman&quot;;</string>
        </property>
        <property name="text">
         <string>12345</string>
@@ -109,7 +109,7 @@ color: rgb(128, 0, 2);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 75 20pt &quot;Helvetica&quot;;
 background-color: rgb(253, 128, 8);
 color: rgb(255, 255, 255);</string>
        </property>
@@ -121,8 +121,8 @@ color: rgb(255, 255, 255);</string>
      <item row="0" column="0" colspan="3">
       <widget class="QLabel" name="task_txt">
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Symbol&quot;;
-color: rgb(0, 0, 0);</string>
+        <string notr="true">color: rgb(0, 0, 0);
+font: 20pt &quot;Tahoma&quot;;</string>
        </property>
        <property name="text">
         <string>Задание. </string>
@@ -143,14 +143,14 @@ color: rgb(0, 0, 0);</string>
     <property name="font">
      <font>
       <family>Helvetica</family>
-      <pointsize>36</pointsize>
+      <pointsize>30</pointsize>
       <weight>9</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Helvetica&quot;;
+     <string notr="true">font: 75 30pt &quot;Helvetica&quot;;
 color: rgb(217, 5, 7);</string>
     </property>
     <property name="text">
@@ -169,8 +169,9 @@ color: rgb(217, 5, 7);</string>
     <property name="font">
      <font>
       <family>Courier</family>
-      <pointsize>36</pointsize>
+      <pointsize>30</pointsize>
       <weight>50</weight>
+      <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
@@ -179,6 +180,9 @@ color: rgb(217, 5, 7);</string>
     </property>
     <property name="mouseTracking">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Courier&quot;;</string>
     </property>
     <property name="text">
      <string>TextLabel</string>

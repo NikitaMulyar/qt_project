@@ -30,7 +30,7 @@
      <item row="1" column="0" colspan="3">
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string notr="true">font: 36pt bold &quot;Arial&quot;;
+        <string notr="true">font: 30pt bold &quot;Arial&quot;;
 color: rgb(0, 0, 0);
 </string>
        </property>
@@ -76,7 +76,7 @@ color: rgb(0, 0, 0);
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 36pt &quot;Helvetica&quot;;
+        <string notr="true">font: 30pt &quot;Helvetica&quot;;
 background-color: rgb(253, 119, 15);
 color: rgb(0, 0, 0);</string>
        </property>
@@ -90,7 +90,7 @@ color: rgb(0, 0, 0);</string>
        <property name="styleSheet">
         <string notr="true">color: rgb(0, 0, 0);
 background-color: rgba(253, 138, 8, 191);
-font: 24pt &quot;Georgia&quot;;</string>
+font: 20pt &quot;Georgia&quot;;</string>
        </property>
       </widget>
      </item>
@@ -116,7 +116,7 @@ font: 24pt &quot;Georgia&quot;;</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Arial&quot;;
+        <string notr="true">font: 20pt &quot;Arial&quot;;
 color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
@@ -158,7 +158,7 @@ color: rgb(0, 0, 0);</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+     <string notr="true">font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);</string>
     </property>

@@ -27,7 +27,7 @@ class Ui_LogOrRegWindow(object):
         self.log_btn.setMinimumSize(QtCore.QSize(500, 100))
         self.log_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.log_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 36pt \"Helvetica\";\n"
+"font: 75 30pt \"Helvetica\";\n"
 "background-color: rgb(226, 118, 43);")
         self.log_btn.setObjectName("log_btn")
         self.gridLayout.addWidget(self.log_btn, 3, 1, 1, 1)
@@ -39,7 +39,7 @@ class Ui_LogOrRegWindow(object):
         self.reg_syst_btn.setMinimumSize(QtCore.QSize(500, 100))
         self.reg_syst_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.reg_syst_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 36pt \"Helvetica\";\n"
+"font: 75 30pt \"Helvetica\";\n"
 "background-color: rgb(226, 118, 43);")
         self.reg_syst_btn.setObjectName("reg_syst_btn")
         self.gridLayout.addWidget(self.reg_syst_btn, 1, 1, 1, 1)
@@ -58,7 +58,7 @@ class Ui_LogOrRegWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
 "")

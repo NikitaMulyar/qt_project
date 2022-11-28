@@ -23,7 +23,7 @@ class Ui_ShopWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.label = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.label.setStyleSheet("font: 36pt bold \"Arial\";\n"
+        self.label.setStyleSheet("font: 30pt bold \"Arial\";\n"
 "color: rgb(0, 0, 0);\n"
 "")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -36,7 +36,7 @@ class Ui_ShopWindow(object):
         self.buy_btn.setMaximumSize(QtCore.QSize(500, 16777215))
         self.buy_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.buy_btn.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.buy_btn.setStyleSheet("font: 36pt \"Helvetica\";\n"
+        self.buy_btn.setStyleSheet("font: 30pt \"Helvetica\";\n"
 "background-color: rgb(253, 119, 15);\n"
 "color: rgb(0, 0, 0);")
         self.buy_btn.setObjectName("buy_btn")
@@ -44,7 +44,7 @@ class Ui_ShopWindow(object):
         self.tableItems = QtWidgets.QTableWidget(self.gridLayoutWidget)
         self.tableItems.setStyleSheet("color: rgb(0, 0, 0);\n"
 "background-color: rgba(253, 138, 8, 191);\n"
-"font: 24pt \"Georgia\";")
+"font: 20pt \"Georgia\";")
         self.tableItems.setObjectName("tableItems")
         self.tableItems.setColumnCount(0)
         self.tableItems.setRowCount(0)
@@ -53,7 +53,7 @@ class Ui_ShopWindow(object):
         self.gridLayout.addItem(spacerItem1, 4, 2, 1, 1)
         self.label_2 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_2.setMaximumSize(QtCore.QSize(1000000, 16777215))
-        self.label_2.setStyleSheet("font: 24pt \"Arial\";\n"
+        self.label_2.setStyleSheet("font: 20pt \"Arial\";\n"
 "color: rgb(0, 0, 0);")
         self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_2.setObjectName("label_2")
@@ -64,7 +64,7 @@ class Ui_ShopWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);")
         self.go_back.setObjectName("go_back")

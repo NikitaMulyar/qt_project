@@ -52,7 +52,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 25 italic 20pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-left-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -67,7 +67,7 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLabel" name="place_txt">
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;Courier&quot;;
+font: 20pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -85,7 +85,7 @@ border-top-color: rgb(0, 0, 0);
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
-font: 24pt &quot;Courier&quot;;
+font: 20pt &quot;Courier&quot;;
 </string>
        </property>
        <property name="text">
@@ -126,7 +126,7 @@ font: 24pt &quot;Courier&quot;;
       <widget class="QLabel" name="balance_txt">
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;Courier&quot;;
+font: 20pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -148,8 +148,17 @@ border-top-color: rgb(0, 0, 0);
          <height>90</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Helvetica</family>
+         <pointsize>20</pointsize>
+         <weight>3</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 25 italic 20pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-left-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -169,7 +178,7 @@ color: rgb(0, 0, 0);</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 25 italic 20pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-left-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -184,7 +193,7 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLabel" name="name_txt">
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;Courier&quot;;
+font: 20pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -210,7 +219,7 @@ border-top-color: rgb(0, 0, 0);
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 25 italic 20pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-left-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -230,7 +239,7 @@ color: rgb(0, 0, 0);</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 25 italic 20pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-left-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -266,7 +275,7 @@ color: rgb(0, 0, 0);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 25 italic 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 25 italic 20pt &quot;Helvetica&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-right-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
@@ -293,7 +302,7 @@ color: rgb(0, 0, 0);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(128, 0, 2);
-font: 24pt &quot;Courier&quot;;
+font: 20pt &quot;Courier&quot;;
 border-bottom-color: rgb(0, 0, 0);
 border-top-color: rgb(0, 0, 0);
 </string>
@@ -316,7 +325,7 @@ border-top-color: rgb(0, 0, 0);
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(47, 106, 255, 194);
-font: 24pt &quot;Courier&quot;;
+font: 20pt &quot;Courier&quot;;
 color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
@@ -332,7 +341,7 @@ color: rgb(0, 0, 0);</string>
       <x>240</x>
       <y>650</y>
       <width>1570</width>
-      <height>281</height>
+      <height>221</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -345,7 +354,7 @@ color: rgb(0, 0, 0);</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 36pt &quot;Helvetica&quot;;
+        <string notr="true">font: 75 30pt &quot;Helvetica&quot;;
 color: rgb(252, 1, 7);
 background-color: rgba(253, 128, 8, 128);</string>
        </property>
@@ -379,7 +388,7 @@ background-color: rgba(253, 128, 8, 128);</string>
          <property name="styleSheet">
           <string notr="true">color: rgb(15, 128, 255);
 background-color: rgba(255, 255, 255, 64);
-font: 24pt &quot;Courier&quot;;</string>
+font: 20pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Сменить пароль</string>
@@ -404,10 +413,9 @@ font: 24pt &quot;Courier&quot;;</string>
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
-color: rgb(15, 128, 255);
+          <string notr="true">color: rgb(15, 128, 255);
 background-color: rgba(255, 255, 255, 64);
-font: 24pt &quot;Courier&quot;;</string>
+font: 20pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Сменить юзернейм</string>
@@ -432,10 +440,9 @@ font: 24pt &quot;Courier&quot;;</string>
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
-color: rgb(15, 128, 255);
+          <string notr="true">color: rgb(15, 128, 255);
 background-color: rgba(255, 255, 255, 64);
-font: 24pt &quot;Courier&quot;;</string>
+font: 20pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Выйти из профиля</string>
@@ -460,10 +467,9 @@ font: 24pt &quot;Courier&quot;;</string>
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
-color: rgb(15, 128, 255);
+          <string notr="true">color: rgb(15, 128, 255);
 background-color: rgba(255, 255, 255, 64);
-font: 24pt &quot;Courier&quot;;</string>
+font: 20pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Установить аватарку</string>
@@ -488,10 +494,9 @@ font: 24pt &quot;Courier&quot;;</string>
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 24pt &quot;JetBrains Mono&quot;;
-color: rgb(15, 128, 255);
+          <string notr="true">color: rgb(15, 128, 255);
 background-color: rgba(255, 255, 255, 64);
-font: 24pt &quot;Courier&quot;;</string>
+font: 20pt &quot;Courier&quot;;</string>
          </property>
          <property name="text">
           <string>Удалить аккаунт</string>
@@ -505,8 +510,8 @@ font: 24pt &quot;Courier&quot;;</string>
    <widget class="QPushButton" name="go_back">
     <property name="geometry">
      <rect>
-      <x>1130</x>
-      <y>940</y>
+      <x>1100</x>
+      <y>890</y>
       <width>200</width>
       <height>60</height>
      </rect>
@@ -530,7 +535,7 @@ font: 24pt &quot;Courier&quot;;</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+     <string notr="true">font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);</string>
     </property>

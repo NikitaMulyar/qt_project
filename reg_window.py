@@ -23,7 +23,7 @@ class Ui_RegWindow(object):
         self.gridLayout.setObjectName("gridLayout")
         self.label = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label.setMinimumSize(QtCore.QSize(450, 0))
-        self.label.setStyleSheet("font: 36pt bold \"Helvetica\";\n"
+        self.label.setStyleSheet("font: 30pt bold \"Helvetica\";\n"
 "color: rgb(128, 0, 2);")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
@@ -32,7 +32,7 @@ class Ui_RegWindow(object):
         self.username_enter.setMinimumSize(QtCore.QSize(0, 40))
         self.username_enter.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);\n"
-"font: 24pt \"Courier\";")
+"font: 20pt \"Courier\";")
         self.username_enter.setText("")
         self.username_enter.setObjectName("username_enter")
         self.gridLayout.addWidget(self.username_enter, 0, 1, 1, 1)
@@ -40,11 +40,11 @@ class Ui_RegWindow(object):
         self.psw_enter.setMinimumSize(QtCore.QSize(0, 40))
         self.psw_enter.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: rgb(0, 0, 0);\n"
-"font: 24pt \"Courier\";")
+"font: 20pt \"Courier\";")
         self.psw_enter.setObjectName("psw_enter")
         self.gridLayout.addWidget(self.psw_enter, 1, 1, 1, 1)
         self.label_3 = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.label_3.setStyleSheet("font: 36pt bold \"Helvetica\";\n"
+        self.label_3.setStyleSheet("font: 30pt bold \"Helvetica\";\n"
 "color: rgb(128, 0, 2);")
         self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_3.setObjectName("label_3")
@@ -54,14 +54,14 @@ class Ui_RegWindow(object):
         self.reg_btn.setMinimumSize(QtCore.QSize(500, 100))
         self.reg_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.reg_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 75 36pt \"Helvetica\";\n"
+"font: 75 30pt \"Helvetica\";\n"
 "background-color: rgb(226, 118, 43);")
         self.reg_btn.setObjectName("reg_btn")
         self.go_back = QtWidgets.QPushButton(self.centralwidget)
         self.go_back.setGeometry(QtCore.QRect(1340, 730, 200, 60))
         self.go_back.setMinimumSize(QtCore.QSize(200, 60))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);")
         self.go_back.setObjectName("go_back")

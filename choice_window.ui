@@ -67,7 +67,7 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -86,7 +86,7 @@ background-color: rgb(253, 102, 102);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(205, 0, 18);
-font: 36pt &quot;Arial Black&quot;;
+font: 30pt &quot;Arial Black&quot;;
 background-color: rgba(254, 184, 43, 128);</string>
        </property>
        <property name="text">
@@ -109,7 +109,7 @@ background-color: rgba(254, 184, 43, 128);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -130,7 +130,7 @@ background-color: rgb(253, 102, 102);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -143,7 +143,7 @@ background-color: rgb(253, 102, 102);</string>
       <widget class="QLabel" name="label_8">
        <property name="styleSheet">
         <string notr="true">color: rgb(205, 0, 18);
-font: 36pt &quot;Arial Black&quot;;
+font: 30pt &quot;Arial Black&quot;;
 background-color: rgba(254, 184, 43, 128);</string>
        </property>
        <property name="text">
@@ -165,7 +165,7 @@ background-color: rgba(254, 184, 43, 128);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(205, 0, 18);
-font: 36pt &quot;Arial Black&quot;;
+font: 30pt &quot;Arial Black&quot;;
 background-color: rgba(254, 184, 43, 128);</string>
        </property>
        <property name="text">
@@ -180,7 +180,7 @@ background-color: rgba(254, 184, 43, 128);</string>
       <widget class="QLabel" name="label_5">
        <property name="styleSheet">
         <string notr="true">color: rgb(205, 0, 18);
-font: 36pt &quot;Arial Black&quot;;
+font: 30pt &quot;Arial Black&quot;;
 background-color: rgba(254, 184, 43, 128);</string>
        </property>
        <property name="text">
@@ -204,7 +204,7 @@ background-color: rgba(254, 184, 43, 128);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -225,7 +225,7 @@ background-color: rgb(253, 102, 102);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -246,7 +246,7 @@ background-color: rgb(253, 102, 102);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -260,7 +260,7 @@ background-color: rgb(253, 102, 102);</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Решите загадку и
@@ -277,7 +277,7 @@ font: 24pt &quot;Verdana&quot;;</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Сделайте ставку и
@@ -295,7 +295,7 @@ x200!</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Узнайте, кто сейчас на первом месте!</string>
@@ -310,7 +310,7 @@ font: 24pt &quot;Verdana&quot;;</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Сделайте ставку и коэффициент - если
@@ -329,7 +329,7 @@ font: 24pt &quot;Verdana&quot;;</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Ответьте на вопрос и
@@ -345,7 +345,7 @@ font: 24pt &quot;Verdana&quot;;</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Обменяйте ваши деньги на призы!</string>
@@ -367,7 +367,7 @@ font: 24pt &quot;Verdana&quot;;</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -381,7 +381,7 @@ background-color: rgb(253, 102, 102);</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Весь выигрыш зависит от
@@ -404,7 +404,7 @@ font: 24pt &quot;Verdana&quot;;</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Georgia&quot;;
+        <string notr="true">font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(253, 102, 102);</string>
        </property>
@@ -418,7 +418,7 @@ background-color: rgb(253, 102, 102);</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 128);
 color: rgb(255, 255, 255);
-font: 24pt &quot;Verdana&quot;;</string>
+font: 20pt &quot;Verdana&quot;;</string>
        </property>
        <property name="text">
         <string>Иногда публикуются промокоды...
@@ -444,7 +444,7 @@ font: 24pt &quot;Verdana&quot;;</string>
      <item>
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Arial&quot;;
+        <string notr="true">font: 20pt &quot;Arial&quot;;
 color: rgb(128, 0, 2);</string>
        </property>
        <property name="text">
@@ -462,7 +462,7 @@ color: rgb(128, 0, 2);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(252, 1, 7);
-font: 75 36pt &quot;Courier&quot;;</string>
+font: 75 30pt &quot;Courier&quot;;</string>
        </property>
        <property name="text">
         <string>0</string>
@@ -491,7 +491,7 @@ font: 75 36pt &quot;Courier&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255, 40);
-font: 30pt &quot;Arial&quot;;
+font: 24pt &quot;Arial&quot;;
 color: rgb(128, 0, 2);</string>
     </property>
     <property name="text">
@@ -501,8 +501,8 @@ color: rgb(128, 0, 2);</string>
    <widget class="QPushButton" name="go_back">
     <property name="geometry">
      <rect>
-      <x>1160</x>
-      <y>940</y>
+      <x>1180</x>
+      <y>830</y>
       <width>191</width>
       <height>71</height>
      </rect>
@@ -523,7 +523,7 @@ color: rgb(128, 0, 2);</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+     <string notr="true">font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);</string>
     </property>

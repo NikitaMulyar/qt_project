@@ -26,7 +26,7 @@ class Ui_LevelWindow(object):
         self.medium.setMinimumSize(QtCore.QSize(400, 100))
         self.medium.setMaximumSize(QtCore.QSize(400, 16777215))
         self.medium.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.medium.setStyleSheet("font: 48pt bold \"Arial\";\n"
+        self.medium.setStyleSheet("font: 40pt bold \"Arial\";\n"
 "background-color: rgb(254, 204, 102);\n"
 "color: rgb(102, 102, 255);")
         self.medium.setObjectName("medium")
@@ -35,7 +35,7 @@ class Ui_LevelWindow(object):
         self.hard.setMinimumSize(QtCore.QSize(400, 100))
         self.hard.setMaximumSize(QtCore.QSize(400, 16777215))
         self.hard.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.hard.setStyleSheet("font: 48pt bold \"Arial\";\n"
+        self.hard.setStyleSheet("font: 40pt bold \"Arial\";\n"
 "background-color: rgb(254, 204, 102);\n"
 "color: rgb(128, 0, 2);")
         self.hard.setObjectName("hard")
@@ -46,7 +46,7 @@ class Ui_LevelWindow(object):
         self.easy.setMinimumSize(QtCore.QSize(400, 100))
         self.easy.setMaximumSize(QtCore.QSize(400, 16777215))
         self.easy.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.easy.setStyleSheet("font: 48pt bold \"Arial\";\n"
+        self.easy.setStyleSheet("font: 40pt bold \"Arial\";\n"
 "background-color: rgb(254, 204, 102);\n"
 "color: rgb(16, 128, 1);")
         self.easy.setObjectName("easy")
@@ -65,7 +65,7 @@ class Ui_LevelWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
 "")

@@ -64,7 +64,7 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 48pt &quot;Helvetica&quot;;
+        <string notr="true">font: 40pt &quot;Helvetica&quot;;
 color: rgb(255, 255, 255);
 background-color: rgba(253, 128, 8, 200);</string>
        </property>

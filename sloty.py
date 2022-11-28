@@ -27,7 +27,7 @@ class Ui_SlotWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
 "")
@@ -39,77 +39,77 @@ class Ui_SlotWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.label_2 = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.label_2.setStyleSheet("font: 24pt \"Symbol\";\n"
+        self.label_2.setStyleSheet("font: 20pt \"Tahoma\";\n"
 "color: rgb(128, 0, 2);")
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 4, 0, 1, 1)
         self.stavka_summ = QtWidgets.QLineEdit(self.gridLayoutWidget)
         self.stavka_summ.setMinimumSize(QtCore.QSize(200, 50))
-        self.stavka_summ.setStyleSheet("font: 24pt \"Courier\";")
+        self.stavka_summ.setStyleSheet("font: 20pt \"Courier\";")
         self.stavka_summ.setObjectName("stavka_summ")
         self.gridLayout.addWidget(self.stavka_summ, 4, 1, 1, 3)
         self.task_txt_2 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.task_txt_2.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.task_txt_2.setStyleSheet("font: 24pt \"Symbol\";\n"
-"color: rgb(0, 0, 0);")
+        self.task_txt_2.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Tahoma\";")
         self.task_txt_2.setObjectName("task_txt_2")
         self.gridLayout.addWidget(self.task_txt_2, 0, 0, 1, 4)
         self.run_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.run_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.run_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.run_btn.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
+        self.run_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")
         self.run_btn.setObjectName("run_btn")
         self.gridLayout.addWidget(self.run_btn, 4, 4, 1, 1)
         self.task_txt = QtWidgets.QLabel(self.gridLayoutWidget)
         self.task_txt.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.task_txt.setStyleSheet("font: 24pt \"Symbol\";\n"
-"color: rgb(0, 0, 0);")
+        self.task_txt.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Tahoma\";")
         self.task_txt.setObjectName("task_txt")
         self.gridLayout.addWidget(self.task_txt, 1, 0, 1, 4)
         self.fruits_txt = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.fruits_txt.setStyleSheet("font: 72pt \".AppleSystemUIFont\";\n"
+        self.fruits_txt.setStyleSheet("font: 60pt \".AppleSystemUIFont\";\n"
 "color: rgb(0, 0, 0);")
         self.fruits_txt.setObjectName("fruits_txt")
         self.gridLayout.addWidget(self.fruits_txt, 0, 4, 1, 3)
         self.win_txt = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.win_txt.setStyleSheet("font: 24pt \"Courier\";\n"
+        self.win_txt.setStyleSheet("font: 20pt \"Courier\";\n"
 "color: rgb(0, 0, 0);")
         self.win_txt.setObjectName("win_txt")
         self.gridLayout.addWidget(self.win_txt, 2, 4, 1, 3)
         self.coef_txt = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.coef_txt.setStyleSheet("font: 24pt \"Courier\";\n"
+        self.coef_txt.setStyleSheet("font: 20pt \"Courier\";\n"
 "color: rgb(0, 0, 0);")
         self.coef_txt.setObjectName("coef_txt")
         self.gridLayout.addWidget(self.coef_txt, 1, 4, 1, 3)
         self.curr_txt = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.curr_txt.setStyleSheet("font: 24pt \"Courier\";\n"
+        self.curr_txt.setStyleSheet("font: 20pt \"Courier\";\n"
 "color: rgb(0, 0, 0);")
         self.curr_txt.setObjectName("curr_txt")
         self.gridLayout.addWidget(self.curr_txt, 3, 4, 1, 3)
         self.task_txt_4 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.task_txt_4.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.task_txt_4.setStyleSheet("font: 24pt \"Symbol\";\n"
-"color: rgb(0, 0, 0);")
+        self.task_txt_4.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Tahoma\";")
         self.task_txt_4.setObjectName("task_txt_4")
         self.gridLayout.addWidget(self.task_txt_4, 3, 0, 1, 4)
         self.task_txt_3 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.task_txt_3.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.task_txt_3.setStyleSheet("font: 24pt \"Symbol\";\n"
-"color: rgb(0, 0, 0);")
+        self.task_txt_3.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Tahoma\";")
         self.task_txt_3.setObjectName("task_txt_3")
         self.gridLayout.addWidget(self.task_txt_3, 2, 0, 1, 4)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.gridLayout.addItem(spacerItem, 4, 5, 1, 2)
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(1330, 10, 241, 31))
-        self.label.setStyleSheet("font: 24pt \"Symbol\";\n"
+        self.label.setStyleSheet("font: 20pt \"Symbol\";\n"
 "color: rgb(0, 0, 0);")
         self.label.setObjectName("label")
         self.curr_hard = QtWidgets.QLabel(self.centralwidget)
         self.curr_hard.setGeometry(QtCore.QRect(1570, 0, 291, 50))
-        self.curr_hard.setStyleSheet("font: 24pt \"Courier\";\n"
+        self.curr_hard.setStyleSheet("font: 20pt \"Courier\";\n"
 "color: rgb(128, 0, 2);")
         self.curr_hard.setObjectName("curr_hard")
         SlotWindow.setCentralWidget(self.centralwidget)

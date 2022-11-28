@@ -51,7 +51,7 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+     <string notr="true">font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);
 </string>
@@ -79,7 +79,7 @@ background-color: rgb(254, 204, 102);
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Courier&quot;;</string>
+        <string notr="true">font: 20pt &quot;Courier&quot;;</string>
        </property>
        <property name="text">
         <string>12345</string>
@@ -89,7 +89,7 @@ background-color: rgb(254, 204, 102);
      <item row="0" column="0">
       <widget class="QLabel" name="label_3">
        <property name="styleSheet">
-        <string notr="true">font: 24pt &quot;Symbol&quot;;
+        <string notr="true">font: 20pt &quot;Tahoma&quot;;
 color: rgb(128, 0, 2);</string>
        </property>
        <property name="text">
@@ -109,7 +109,7 @@ color: rgb(128, 0, 2);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 24pt &quot;Helvetica&quot;;
+        <string notr="true">font: 75 20pt &quot;Helvetica&quot;;
 background-color: rgb(253, 128, 8);
 color: rgb(255, 255, 255);</string>
        </property>

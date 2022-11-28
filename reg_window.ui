@@ -33,7 +33,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 36pt bold &quot;Helvetica&quot;;
+        <string notr="true">font: 30pt bold &quot;Helvetica&quot;;
 color: rgb(128, 0, 2);</string>
        </property>
        <property name="text">
@@ -55,7 +55,7 @@ color: rgb(128, 0, 2);</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);
-font: 24pt &quot;Courier&quot;;</string>
+font: 20pt &quot;Courier&quot;;</string>
        </property>
        <property name="text">
         <string/>
@@ -73,14 +73,14 @@ font: 24pt &quot;Courier&quot;;</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);
-font: 24pt &quot;Courier&quot;;</string>
+font: 20pt &quot;Courier&quot;;</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_3">
        <property name="styleSheet">
-        <string notr="true">font: 36pt bold &quot;Helvetica&quot;;
+        <string notr="true">font: 30pt bold &quot;Helvetica&quot;;
 color: rgb(128, 0, 2);</string>
        </property>
        <property name="text">
@@ -113,7 +113,7 @@ color: rgb(128, 0, 2);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-font: 75 36pt &quot;Helvetica&quot;;
+font: 75 30pt &quot;Helvetica&quot;;
 background-color: rgb(226, 118, 43);</string>
     </property>
     <property name="text">
@@ -139,7 +139,7 @@ background-color: rgb(226, 118, 43);</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+     <string notr="true">font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);</string>
     </property>

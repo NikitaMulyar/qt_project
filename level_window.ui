@@ -48,7 +48,7 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 48pt bold &quot;Arial&quot;;
+        <string notr="true">font: 40pt bold &quot;Arial&quot;;
 background-color: rgb(254, 204, 102);
 color: rgb(102, 102, 255);</string>
        </property>
@@ -75,7 +75,7 @@ color: rgb(102, 102, 255);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 48pt bold &quot;Arial&quot;;
+        <string notr="true">font: 40pt bold &quot;Arial&quot;;
 background-color: rgb(254, 204, 102);
 color: rgb(128, 0, 2);</string>
        </property>
@@ -115,7 +115,7 @@ color: rgb(128, 0, 2);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 48pt bold &quot;Arial&quot;;
+        <string notr="true">font: 40pt bold &quot;Arial&quot;;
 background-color: rgb(254, 204, 102);
 color: rgb(16, 128, 1);</string>
        </property>
@@ -176,7 +176,7 @@ color: rgb(16, 128, 1);</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 36pt &quot;Courier&quot;;
+     <string notr="true">font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);
 </string>

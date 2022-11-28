@@ -27,7 +27,7 @@ class Ui_ProbSolvWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
 "")
@@ -39,50 +39,52 @@ class Ui_ProbSolvWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.label_2 = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.label_2.setStyleSheet("font: 24pt \"Symbol\";\n"
+        self.label_2.setStyleSheet("font: 20pt \"Tahoma\";\n"
 "color: rgb(128, 0, 2);")
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
         self.answ_area = QtWidgets.QLineEdit(self.gridLayoutWidget)
         self.answ_area.setMinimumSize(QtCore.QSize(0, 50))
-        self.answ_area.setStyleSheet("font: italic 24pt \"Times New Roman\";")
+        self.answ_area.setStyleSheet("font: italic 20pt \"Times New Roman\";")
         self.answ_area.setObjectName("answ_area")
         self.gridLayout.addWidget(self.answ_area, 1, 1, 1, 1)
         self.check_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.check_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.check_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.check_btn.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
+        self.check_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")
         self.check_btn.setObjectName("check_btn")
         self.gridLayout.addWidget(self.check_btn, 1, 2, 1, 1)
         self.task_txt = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.task_txt.setStyleSheet("font: 24pt \"Symbol\";\n"
-"color: rgb(0, 0, 0);")
+        self.task_txt.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Tahoma\";")
         self.task_txt.setObjectName("task_txt")
         self.gridLayout.addWidget(self.task_txt, 0, 0, 1, 3)
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(480, 980, 421, 61))
         font = QtGui.QFont()
         font.setFamily("Helvetica")
-        font.setPointSize(36)
+        font.setPointSize(30)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
         self.label.setFont(font)
-        self.label.setStyleSheet("font: 75 36pt \"Helvetica\";\n"
+        self.label.setStyleSheet("font: 75 30pt \"Helvetica\";\n"
 "color: rgb(217, 5, 7);")
         self.label.setObjectName("label")
         self.promo_txt = QtWidgets.QLabel(self.centralwidget)
         self.promo_txt.setGeometry(QtCore.QRect(910, 980, 451, 61))
         font = QtGui.QFont()
         font.setFamily("Courier")
-        font.setPointSize(36)
+        font.setPointSize(30)
         font.setBold(False)
+        font.setItalic(False)
         font.setWeight(50)
         self.promo_txt.setFont(font)
         self.promo_txt.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.IBeamCursor))
         self.promo_txt.setMouseTracking(False)
+        self.promo_txt.setStyleSheet("font: 30pt \"Courier\";")
         self.promo_txt.setTextInteractionFlags(QtCore.Qt.TextInteractionFlag.LinksAccessibleByMouse|QtCore.Qt.TextInteractionFlag.TextSelectableByMouse)
         self.promo_txt.setObjectName("promo_txt")
         ProbSolvWindow.setCentralWidget(self.centralwidget)

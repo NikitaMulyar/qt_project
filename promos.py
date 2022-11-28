@@ -27,7 +27,7 @@ class Ui_PromoWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
 "")
@@ -40,18 +40,18 @@ class Ui_PromoWindow(object):
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.answ_area_2 = QtWidgets.QLineEdit(self.gridLayoutWidget)
         self.answ_area_2.setMinimumSize(QtCore.QSize(0, 50))
-        self.answ_area_2.setStyleSheet("font: 24pt \"Courier\";")
+        self.answ_area_2.setStyleSheet("font: 20pt \"Courier\";")
         self.answ_area_2.setObjectName("answ_area_2")
         self.gridLayout_2.addWidget(self.answ_area_2, 0, 1, 1, 1)
         self.label_3 = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.label_3.setStyleSheet("font: 24pt \"Symbol\";\n"
+        self.label_3.setStyleSheet("font: 20pt \"Tahoma\";\n"
 "color: rgb(128, 0, 2);")
         self.label_3.setObjectName("label_3")
         self.gridLayout_2.addWidget(self.label_3, 0, 0, 1, 1)
         self.check_btn_2 = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.check_btn_2.setMinimumSize(QtCore.QSize(300, 70))
         self.check_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.check_btn_2.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
+        self.check_btn_2.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")
         self.check_btn_2.setObjectName("check_btn_2")

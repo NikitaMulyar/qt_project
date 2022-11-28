@@ -24,7 +24,7 @@ class Ui_ViktWindow(object):
         self.tip_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.tip_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.tip_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.tip_btn.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
+        self.tip_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")
         self.tip_btn.setObjectName("tip_btn")
@@ -32,24 +32,24 @@ class Ui_ViktWindow(object):
         self.check_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.check_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.check_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.check_btn.setStyleSheet("font: 75 24pt \"Helvetica\";\n"
+        self.check_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
 "color: rgb(255, 255, 255);")
         self.check_btn.setObjectName("check_btn")
         self.gridLayout.addWidget(self.check_btn, 1, 2, 1, 1)
         self.answ_area = QtWidgets.QLineEdit(self.gridLayoutWidget)
         self.answ_area.setMinimumSize(QtCore.QSize(0, 50))
-        self.answ_area.setStyleSheet("font: italic 24pt \"Times New Roman\";")
+        self.answ_area.setStyleSheet("font: italic 20pt \"Times New Roman\";")
         self.answ_area.setObjectName("answ_area")
         self.gridLayout.addWidget(self.answ_area, 1, 1, 1, 1)
         self.label_2 = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.label_2.setStyleSheet("font: 24pt \"Symbol\";\n"
+        self.label_2.setStyleSheet("font: 20pt \"Tahoma\";\n"
 "color: rgb(128, 0, 2);")
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
         self.task_txt = QtWidgets.QLabel(self.gridLayoutWidget)
-        self.task_txt.setStyleSheet("font: 24pt \"Symbol\";\n"
-"color: rgb(0, 0, 0);")
+        self.task_txt.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 20pt \"Tahoma\";")
         self.task_txt.setObjectName("task_txt")
         self.gridLayout.addWidget(self.task_txt, 0, 0, 1, 5)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -66,7 +66,7 @@ class Ui_ViktWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
 "")

@@ -29,7 +29,7 @@ class Ui_ChoiceWindow(object):
         self.top_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.top_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.top_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.top_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.top_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.top_btn.setObjectName("top_btn")
@@ -37,7 +37,7 @@ class Ui_ChoiceWindow(object):
         self.label_7 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_7.setMaximumSize(QtCore.QSize(200, 50))
         self.label_7.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 36pt \"Arial Black\";\n"
+"font: 30pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_7.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_7.setObjectName("label_7")
@@ -45,7 +45,7 @@ class Ui_ChoiceWindow(object):
         self.shop_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.shop_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.shop_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.shop_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.shop_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.shop_btn.setObjectName("shop_btn")
@@ -53,14 +53,14 @@ class Ui_ChoiceWindow(object):
         self.crash_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.crash_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.crash_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.crash_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.crash_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.crash_btn.setObjectName("crash_btn")
         self.gridLayout.addWidget(self.crash_btn, 1, 3, 1, 1)
         self.label_8 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_8.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 36pt \"Arial Black\";\n"
+"font: 30pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_8.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_8.setObjectName("label_8")
@@ -68,14 +68,14 @@ class Ui_ChoiceWindow(object):
         self.label_6 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_6.setMaximumSize(QtCore.QSize(200, 50))
         self.label_6.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 36pt \"Arial Black\";\n"
+"font: 30pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_6.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.gridLayout.addWidget(self.label_6, 0, 0, 1, 1)
         self.label_5 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_5.setStyleSheet("color: rgb(205, 0, 18);\n"
-"font: 36pt \"Arial Black\";\n"
+"font: 30pt \"Arial Black\";\n"
 "background-color: rgba(254, 184, 43, 128);")
         self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_5.setObjectName("label_5")
@@ -83,7 +83,7 @@ class Ui_ChoiceWindow(object):
         self.kazino_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.kazino_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.kazino_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.kazino_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.kazino_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.kazino_btn.setObjectName("kazino_btn")
@@ -91,7 +91,7 @@ class Ui_ChoiceWindow(object):
         self.viktorina_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.viktorina_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.viktorina_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.viktorina_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.viktorina_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.viktorina_btn.setObjectName("viktorina_btn")
@@ -99,7 +99,7 @@ class Ui_ChoiceWindow(object):
         self.work_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.work_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.work_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.work_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.work_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.work_btn.setObjectName("work_btn")
@@ -107,49 +107,49 @@ class Ui_ChoiceWindow(object):
         self.label_2 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_2.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 1, 1, 1, 1)
         self.label_11 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_11.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_11.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_11.setObjectName("label_11")
         self.gridLayout.addWidget(self.label_11, 2, 1, 1, 1)
         self.label_14 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_14.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_14.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_14.setObjectName("label_14")
         self.gridLayout.addWidget(self.label_14, 3, 1, 1, 1)
         self.label_13 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_13.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_13.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_13.setObjectName("label_13")
         self.gridLayout.addWidget(self.label_13, 1, 4, 1, 1)
         self.label_12 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_12.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_12.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_12.setObjectName("label_12")
         self.gridLayout.addWidget(self.label_12, 2, 4, 1, 1)
         self.label_15 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_15.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_15.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_15.setObjectName("label_15")
         self.gridLayout.addWidget(self.label_15, 3, 4, 1, 1)
         self.slots_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.slots_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.slots_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.slots_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.slots_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.slots_btn.setObjectName("slots_btn")
@@ -157,14 +157,14 @@ class Ui_ChoiceWindow(object):
         self.label_16 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_16.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_16.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_16.setObjectName("label_16")
         self.gridLayout.addWidget(self.label_16, 4, 1, 1, 1)
         self.promo_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.promo_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.promo_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.promo_btn.setStyleSheet("font: 24pt \"Georgia\";\n"
+        self.promo_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(253, 102, 102);")
         self.promo_btn.setObjectName("promo_btn")
@@ -172,7 +172,7 @@ class Ui_ChoiceWindow(object):
         self.label_17 = QtWidgets.QLabel(self.gridLayoutWidget)
         self.label_17.setStyleSheet("background-color: rgba(0, 0, 0, 128);\n"
 "color: rgb(255, 255, 255);\n"
-"font: 24pt \"Verdana\";")
+"font: 20pt \"Verdana\";")
         self.label_17.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_17.setObjectName("label_17")
         self.gridLayout.addWidget(self.label_17, 4, 4, 1, 1)
@@ -183,14 +183,14 @@ class Ui_ChoiceWindow(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget)
-        self.label.setStyleSheet("font: 24pt \"Arial\";\n"
+        self.label.setStyleSheet("font: 20pt \"Arial\";\n"
 "color: rgb(128, 0, 2);")
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
         self.balance_curr_txt = QtWidgets.QLabel(self.horizontalLayoutWidget)
         self.balance_curr_txt.setMinimumSize(QtCore.QSize(400, 0))
         self.balance_curr_txt.setStyleSheet("color: rgb(252, 1, 7);\n"
-"font: 75 36pt \"Courier\";")
+"font: 75 30pt \"Courier\";")
         self.balance_curr_txt.setObjectName("balance_curr_txt")
         self.horizontalLayout.addWidget(self.balance_curr_txt)
         self.acc = QtWidgets.QPushButton(self.centralwidget)
@@ -198,15 +198,15 @@ class Ui_ChoiceWindow(object):
         self.acc.setMinimumSize(QtCore.QSize(250, 50))
         self.acc.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.acc.setStyleSheet("background-color: rgba(255, 255, 255, 40);\n"
-"font: 30pt \"Arial\";\n"
+"font: 24pt \"Arial\";\n"
 "color: rgb(128, 0, 2);")
         self.acc.setObjectName("acc")
         self.go_back = QtWidgets.QPushButton(self.centralwidget)
-        self.go_back.setGeometry(QtCore.QRect(1160, 940, 191, 71))
+        self.go_back.setGeometry(QtCore.QRect(1180, 830, 191, 71))
         self.go_back.setMinimumSize(QtCore.QSize(0, 60))
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.go_back.setStyleSheet("font: 75 36pt \"Courier\";\n"
+        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);")
         self.go_back.setObjectName("go_back")
