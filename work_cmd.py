@@ -62,7 +62,7 @@ class Ui_ProbSolvWindow(object):
         self.task_txt.setObjectName("task_txt")
         self.gridLayout.addWidget(self.task_txt, 0, 0, 1, 3)
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(480, 980, 421, 61))
+        self.label.setGeometry(QtCore.QRect(480, 980, 561, 61))
         font = QtGui.QFont()
         font.setFamily("Helvetica")
         font.setPointSize(30)
