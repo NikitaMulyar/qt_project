@@ -49,9 +49,22 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
+        <string notr="true">QPushButton {
+color: rgb(255, 255, 255);
 font: 75 30pt &quot;Helvetica&quot;;
-background-color: rgb(226, 118, 43);</string>
+background-color: rgb(226, 118, 43);
+
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(0, 0, 0);
+font: 75 32pt &quot;Helvetica&quot;;
+
+}
+
+</string>
        </property>
        <property name="text">
         <string>ВОЙТИ</string>
@@ -99,9 +112,22 @@ background-color: rgb(226, 118, 43);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
+        <string notr="true">QPushButton {
+color: rgb(255, 255, 255);
 font: 75 30pt &quot;Helvetica&quot;;
-background-color: rgb(226, 118, 43);</string>
+background-color: rgb(226, 118, 43);
+
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(0, 0, 0);
+font: 75 32pt &quot;Helvetica&quot;;
+
+}
+
+</string>
        </property>
        <property name="text">
         <string>ЗАРЕГИСТРИРОВАТЬСЯ</string>
@@ -164,9 +190,18 @@ background-color: rgb(226, 118, 43);</string>
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 30pt &quot;Courier&quot;;
+        <string notr="true">QPushButton {
+	font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(252, 69, 74);
+	font: 32pt &quot;Courier&quot;;
+}
 </string>
        </property>
        <property name="text">

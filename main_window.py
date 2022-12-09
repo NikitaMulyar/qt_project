@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 760, 1921, 150))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 760, 1921, 152))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -29,9 +29,19 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.pushButton.setMinimumSize(QtCore.QSize(400, 150))
         self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.pushButton.setStyleSheet("font: 40pt \"Helvetica\";\n"
+        self.pushButton.setStyleSheet("QPushButton {\n"
+"    font: 40pt \"Helvetica\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgba(253, 128, 8, 200);")
+"background-color: rgba(253, 128, 8, 200);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 44pt \"Helvetica\";\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"")
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)

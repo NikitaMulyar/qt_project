@@ -26,18 +26,37 @@ class Ui_LevelWindow(object):
         self.medium.setMinimumSize(QtCore.QSize(400, 100))
         self.medium.setMaximumSize(QtCore.QSize(400, 16777215))
         self.medium.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.medium.setStyleSheet("font: 40pt bold \"Arial\";\n"
+        self.medium.setStyleSheet("QPushButton {\n"
+"font: 40pt bold \"Arial\";\n"
 "background-color: rgb(254, 204, 102);\n"
-"color: rgb(102, 102, 255);")
+"color: rgb(102, 102, 255);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"font: 44pt bold \"Arial\";\n"
+"\n"
+"}\n"
+"")
         self.medium.setObjectName("medium")
         self.gridLayout.addWidget(self.medium, 2, 0, 1, 1)
         self.hard = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.hard.setMinimumSize(QtCore.QSize(400, 100))
         self.hard.setMaximumSize(QtCore.QSize(400, 16777215))
         self.hard.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.hard.setStyleSheet("font: 40pt bold \"Arial\";\n"
+        self.hard.setStyleSheet("QPushButton {\n"
+"font: 40pt bold \"Arial\";\n"
 "background-color: rgb(254, 204, 102);\n"
-"color: rgb(128, 0, 2);")
+"color: rgb(128, 0, 2);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"font: 44pt bold \"Arial\";\n"
+"\n"
+"}")
         self.hard.setObjectName("hard")
         self.gridLayout.addWidget(self.hard, 3, 0, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
@@ -46,9 +65,19 @@ class Ui_LevelWindow(object):
         self.easy.setMinimumSize(QtCore.QSize(400, 100))
         self.easy.setMaximumSize(QtCore.QSize(400, 16777215))
         self.easy.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.easy.setStyleSheet("font: 40pt bold \"Arial\";\n"
+        self.easy.setStyleSheet("QPushButton {\n"
+"font: 40pt bold \"Arial\";\n"
 "background-color: rgb(254, 204, 102);\n"
-"color: rgb(16, 128, 1);")
+"color: rgb(16, 128, 1);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"font: 44pt bold \"Arial\";\n"
+"\n"
+"}\n"
+"")
         self.easy.setObjectName("easy")
         self.gridLayout.addWidget(self.easy, 1, 0, 1, 1)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
@@ -65,9 +94,18 @@ class Ui_LevelWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}\n"
 "")
         self.go_back.setObjectName("go_back")
         LevelWindow.setCentralWidget(self.centralwidget)

@@ -143,9 +143,19 @@ class Ui_AccWindow(object):
         self.open_invent = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.open_invent.setMinimumSize(QtCore.QSize(0, 90))
         self.open_invent.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.open_invent.setStyleSheet("background-color: rgba(47, 106, 255, 194);\n"
+        self.open_invent.setStyleSheet("QPushButton {\n"
+"    background-color: rgba(47, 106, 255, 194);\n"
 "font: 20pt \"Courier\";\n"
-"color: rgb(0, 0, 0);")
+"color: rgb(0, 0, 0);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"font: 22pt \"Courier\";\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"")
         self.open_invent.setObjectName("open_invent")
         self.gridLayout.addWidget(self.open_invent, 4, 6, 1, 1)
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -168,45 +178,95 @@ class Ui_AccWindow(object):
         self.change_psw_btn.setMinimumSize(QtCore.QSize(300, 60))
         self.change_psw_btn.setMaximumSize(QtCore.QSize(300, 60))
         self.change_psw_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.change_psw_btn.setStyleSheet("color: rgb(15, 128, 255);\n"
+        self.change_psw_btn.setStyleSheet("QPushButton {\n"
+"    color: rgb(15, 128, 255);\n"
 "background-color: rgba(255, 255, 255, 64);\n"
-"font: 20pt \"Courier\";")
+"font: 20pt \"Courier\";\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"color: rgb(23, 43, 255);\n"
+"font: 22pt \"Courier\";\n"
+"}\n"
+"")
         self.change_psw_btn.setObjectName("change_psw_btn")
         self.horizontalLayout.addWidget(self.change_psw_btn)
         self.change_name_btn = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.change_name_btn.setMinimumSize(QtCore.QSize(300, 60))
         self.change_name_btn.setMaximumSize(QtCore.QSize(300, 60))
         self.change_name_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.change_name_btn.setStyleSheet("color: rgb(15, 128, 255);\n"
+        self.change_name_btn.setStyleSheet("QPushButton {\n"
+"    color: rgb(15, 128, 255);\n"
 "background-color: rgba(255, 255, 255, 64);\n"
-"font: 20pt \"Courier\";")
+"font: 20pt \"Courier\";\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"color: rgb(23, 43, 255);\n"
+"font: 22pt \"Courier\";\n"
+"}\n"
+"")
         self.change_name_btn.setObjectName("change_name_btn")
         self.horizontalLayout.addWidget(self.change_name_btn)
         self.log_out_btn = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.log_out_btn.setMinimumSize(QtCore.QSize(300, 60))
         self.log_out_btn.setMaximumSize(QtCore.QSize(300, 60))
         self.log_out_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.log_out_btn.setStyleSheet("color: rgb(15, 128, 255);\n"
+        self.log_out_btn.setStyleSheet("QPushButton {\n"
+"    color: rgb(15, 128, 255);\n"
 "background-color: rgba(255, 255, 255, 64);\n"
-"font: 20pt \"Courier\";")
+"font: 20pt \"Courier\";\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"color: rgb(23, 43, 255);\n"
+"font: 22pt \"Courier\";\n"
+"}\n"
+"")
         self.log_out_btn.setObjectName("log_out_btn")
         self.horizontalLayout.addWidget(self.log_out_btn)
         self.load_profile_pic = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.load_profile_pic.setMinimumSize(QtCore.QSize(300, 60))
         self.load_profile_pic.setMaximumSize(QtCore.QSize(300, 60))
         self.load_profile_pic.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.load_profile_pic.setStyleSheet("color: rgb(15, 128, 255);\n"
+        self.load_profile_pic.setStyleSheet("QPushButton {\n"
+"    color: rgb(15, 128, 255);\n"
 "background-color: rgba(255, 255, 255, 64);\n"
-"font: 20pt \"Courier\";")
+"font: 20pt \"Courier\";\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"color: rgb(23, 43, 255);\n"
+"font: 22pt \"Courier\";\n"
+"}\n"
+"")
         self.load_profile_pic.setObjectName("load_profile_pic")
         self.horizontalLayout.addWidget(self.load_profile_pic)
         self.del_acc_btn = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.del_acc_btn.setMinimumSize(QtCore.QSize(300, 60))
         self.del_acc_btn.setMaximumSize(QtCore.QSize(300, 60))
         self.del_acc_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.del_acc_btn.setStyleSheet("color: rgb(15, 128, 255);\n"
+        self.del_acc_btn.setStyleSheet("QPushButton {\n"
+"    color: rgb(15, 128, 255);\n"
 "background-color: rgba(255, 255, 255, 64);\n"
-"font: 20pt \"Courier\";")
+"font: 20pt \"Courier\";\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"color: rgb(23, 43, 255);\n"
+"font: 22pt \"Courier\";\n"
+"}\n"
+"")
         self.del_acc_btn.setObjectName("del_acc_btn")
         self.horizontalLayout.addWidget(self.del_acc_btn)
         self.verticalLayout.addLayout(self.horizontalLayout)
@@ -216,9 +276,19 @@ class Ui_AccWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
-"background-color: rgb(254, 204, 102);")
+"background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}\n"
+"")
         self.go_back.setObjectName("go_back")
         AccWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(AccWindow)
@@ -252,6 +322,6 @@ class Ui_AccWindow(object):
         self.change_psw_btn.setText(_translate("AccWindow", "Сменить пароль"))
         self.change_name_btn.setText(_translate("AccWindow", "Сменить юзернейм"))
         self.log_out_btn.setText(_translate("AccWindow", "Выйти из профиля"))
-        self.load_profile_pic.setText(_translate("AccWindow", "Поставить аватарку"))
+        self.load_profile_pic.setText(_translate("AccWindow", "Новая аватарка"))
         self.del_acc_btn.setText(_translate("AccWindow", "Удалить аккаунт"))
         self.go_back.setText(_translate("AccWindow", "Назад"))

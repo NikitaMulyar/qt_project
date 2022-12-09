@@ -29,8 +29,7 @@ class Ui_InventWindow(object):
         self.label_3.setObjectName("label_3")
         self.gridLayout_2.addWidget(self.label_3, 1, 0, 1, 2)
         self.tableInventory = QtWidgets.QTableWidget(self.gridLayoutWidget)
-        self.tableInventory.setStyleSheet("color: rgb(0, 0, 0);\n"
-"background-color: rgba(253, 138, 8, 191);\n"
+        self.tableInventory.setStyleSheet("background-color: rgba(253, 138, 8, 191);\n"
 "font: 24pt \"Georgia\";")
         self.tableInventory.setObjectName("tableInventory")
         self.tableInventory.setColumnCount(0)
@@ -42,9 +41,19 @@ class Ui_InventWindow(object):
         self.close_window.setMaximumSize(QtCore.QSize(1000000, 16777215))
         self.close_window.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.close_window.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.close_window.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.close_window.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
-"background-color: rgb(254, 204, 102);")
+"background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}\n"
+"")
         self.close_window.setObjectName("close_window")
         InventWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(InventWindow)

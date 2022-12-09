@@ -27,9 +27,18 @@ class Ui_CrashKazWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}\n"
 "")
         self.go_back.setObjectName("go_back")
         self.gridLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -67,9 +76,21 @@ class Ui_CrashKazWindow(object):
         self.run_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.run_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.run_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.run_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
+        self.run_btn.setStyleSheet("QPushButton {\n"
+"    font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(255, 255, 255);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 75 22pt \"Helvetica\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"\n"
+"")
         self.run_btn.setObjectName("run_btn")
         self.gridLayout.addWidget(self.run_btn, 3, 4, 1, 1)
         self.task_txt = QtWidgets.QLabel(self.gridLayoutWidget)
@@ -103,9 +124,21 @@ class Ui_CrashKazWindow(object):
         self.end_btn.setGeometry(QtCore.QRect(790, 870, 300, 70))
         self.end_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.end_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.end_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
+        self.end_btn.setStyleSheet("QPushButton {\n"
+"    font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(255, 255, 255);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 75 22pt \"Helvetica\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"\n"
+"")
         self.end_btn.setObjectName("end_btn")
         CrashKazWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(CrashKazWindow)

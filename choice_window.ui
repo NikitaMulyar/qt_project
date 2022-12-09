@@ -51,9 +51,20 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Работать</string>
@@ -139,9 +150,20 @@ font: 20pt &quot;Verdana&quot;;</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Ввести промокод</string>
@@ -175,9 +197,20 @@ font: 20pt &quot;Verdana&quot;;</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Слоты</string>
@@ -246,9 +279,20 @@ font: 20pt &quot;Verdana&quot;;</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Краш-казино</string>
@@ -341,9 +385,20 @@ background-color: rgba(254, 184, 43, 128);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Магазин</string>
@@ -362,9 +417,20 @@ background-color: rgb(253, 102, 102);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Топ</string>
@@ -383,9 +449,20 @@ background-color: rgb(253, 102, 102);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Казино</string>
@@ -404,9 +481,20 @@ background-color: rgb(253, 102, 102);</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;Georgia&quot;;
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
 color: rgb(255, 255, 255);
-background-color: rgb(253, 102, 102);</string>
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
        </property>
        <property name="text">
         <string>Викторина</string>
@@ -474,9 +562,18 @@ font: 75 30pt &quot;Courier&quot;;</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 40);
+     <string notr="true">QPushButton {
+	background-color: rgba(255, 255, 255, 40);
 font: 24pt &quot;Arial&quot;;
-color: rgb(128, 0, 2);</string>
+color: rgb(128, 0, 2);
+
+}
+
+QPushButton:hover {
+font: 26pt &quot;Arial&quot;;
+	color: rgb(252, 55, 37);
+}
+</string>
     </property>
     <property name="text">
      <string>Мой Аккаунт</string>
@@ -507,9 +604,19 @@ color: rgb(128, 0, 2);</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 30pt &quot;Courier&quot;;
+     <string notr="true">QPushButton {
+	font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
-background-color: rgb(254, 204, 102);</string>
+background-color: rgb(254, 204, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(252, 69, 74);
+	font: 32pt &quot;Courier&quot;;
+}
+</string>
     </property>
     <property name="text">
      <string>Назад</string>

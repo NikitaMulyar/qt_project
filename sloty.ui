@@ -51,9 +51,18 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 30pt &quot;Courier&quot;;
+     <string notr="true">QPushButton {
+	font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(252, 69, 74);
+	font: 32pt &quot;Courier&quot;;
+}
 </string>
     </property>
     <property name="text">
@@ -126,9 +135,21 @@ font: 20pt &quot;Tahoma&quot;;</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 20pt &quot;Helvetica&quot;;
+        <string notr="true">QPushButton {
+	font: 75 20pt &quot;Helvetica&quot;;
 background-color: rgb(253, 128, 8);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 75 22pt &quot;Helvetica&quot;;
+color: rgb(0, 0, 0);
+
+}
+
+</string>
        </property>
        <property name="text">
         <string>ПОПЫТАЕМ УДАЧУ!</string>

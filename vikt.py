@@ -24,17 +24,39 @@ class Ui_ViktWindow(object):
         self.tip_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.tip_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.tip_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.tip_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
+        self.tip_btn.setStyleSheet("QPushButton {\n"
+"    font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(255, 255, 255);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 75 22pt \"Helvetica\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.tip_btn.setObjectName("tip_btn")
         self.gridLayout.addWidget(self.tip_btn, 1, 4, 1, 1)
         self.check_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.check_btn.setMinimumSize(QtCore.QSize(300, 70))
         self.check_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.check_btn.setStyleSheet("font: 75 20pt \"Helvetica\";\n"
+        self.check_btn.setStyleSheet("QPushButton {\n"
+"    font: 75 20pt \"Helvetica\";\n"
 "background-color: rgb(253, 128, 8);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(255, 255, 255);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 75 22pt \"Helvetica\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.check_btn.setObjectName("check_btn")
         self.gridLayout.addWidget(self.check_btn, 1, 2, 1, 1)
         self.answ_area = QtWidgets.QLineEdit(self.gridLayoutWidget)
@@ -66,10 +88,18 @@ class Ui_ViktWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
-"")
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}")
         self.go_back.setObjectName("go_back")
         ViktWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(ViktWindow)

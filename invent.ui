@@ -42,8 +42,7 @@ color: rgb(0, 0, 0);
      <item row="2" column="0" colspan="2">
       <widget class="QTableWidget" name="tableInventory">
        <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);
-background-color: rgba(253, 138, 8, 191);
+        <string notr="true">background-color: rgba(253, 138, 8, 191);
 font: 24pt &quot;Georgia&quot;;</string>
        </property>
       </widget>
@@ -78,9 +77,19 @@ font: 24pt &quot;Georgia&quot;;</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 30pt &quot;Courier&quot;;
+     <string notr="true">QPushButton {
+	font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
-background-color: rgb(254, 204, 102);</string>
+background-color: rgb(254, 204, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(252, 69, 74);
+	font: 32pt &quot;Courier&quot;;
+}
+</string>
     </property>
     <property name="text">
      <string>Закрыть окно</string>

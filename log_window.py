@@ -52,17 +52,37 @@ class Ui_LogWindow(object):
         self.log_btn.setGeometry(QtCore.QRect(1040, 580, 500, 100))
         self.log_btn.setMinimumSize(QtCore.QSize(500, 100))
         self.log_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.log_btn.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.log_btn.setStyleSheet("QPushButton {\n"
+"color: rgb(255, 255, 255);\n"
 "font: 75 30pt \"Helvetica\";\n"
-"background-color: rgb(226, 118, 43);")
+"background-color: rgb(226, 118, 43);\n"
+"\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(0, 0, 0);\n"
+"font: 75 32pt \"Helvetica\";\n"
+"\n"
+"}")
         self.log_btn.setObjectName("log_btn")
         self.go_back = QtWidgets.QPushButton(self.centralwidget)
         self.go_back.setGeometry(QtCore.QRect(1340, 740, 200, 60))
         self.go_back.setMinimumSize(QtCore.QSize(200, 60))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
-"background-color: rgb(254, 204, 102);")
+"background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}")
         self.go_back.setObjectName("go_back")
         LogWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LogWindow)

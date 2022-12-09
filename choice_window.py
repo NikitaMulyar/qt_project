@@ -27,9 +27,20 @@ class Ui_ChoiceWindow(object):
         self.work_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.work_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.work_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.work_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.work_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.work_btn.setObjectName("work_btn")
         self.gridLayout.addWidget(self.work_btn, 1, 0, 1, 1)
         self.label_2 = QtWidgets.QLabel(self.gridLayoutWidget)
@@ -63,9 +74,20 @@ class Ui_ChoiceWindow(object):
         self.promo_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.promo_btn.setMinimumSize(QtCore.QSize(250, 50))
         self.promo_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.promo_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.promo_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.promo_btn.setObjectName("promo_btn")
         self.gridLayout.addWidget(self.promo_btn, 4, 2, 1, 1)
         self.label_15 = QtWidgets.QLabel(self.gridLayoutWidget)
@@ -78,9 +100,20 @@ class Ui_ChoiceWindow(object):
         self.slots_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.slots_btn.setMinimumSize(QtCore.QSize(250, 50))
         self.slots_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.slots_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.slots_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.slots_btn.setObjectName("slots_btn")
         self.gridLayout.addWidget(self.slots_btn, 4, 0, 1, 1)
         self.label_12 = QtWidgets.QLabel(self.gridLayoutWidget)
@@ -107,9 +140,20 @@ class Ui_ChoiceWindow(object):
         self.crash_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.crash_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.crash_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.crash_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.crash_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.crash_btn.setObjectName("crash_btn")
         self.gridLayout.addWidget(self.crash_btn, 1, 2, 1, 1)
         self.label_6 = QtWidgets.QLabel(self.gridLayoutWidget)
@@ -145,33 +189,77 @@ class Ui_ChoiceWindow(object):
         self.shop_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.shop_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.shop_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.shop_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.shop_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.shop_btn.setObjectName("shop_btn")
         self.gridLayout.addWidget(self.shop_btn, 3, 2, 1, 1)
         self.top_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.top_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.top_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.top_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.top_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.top_btn.setObjectName("top_btn")
         self.gridLayout.addWidget(self.top_btn, 3, 0, 1, 1)
         self.kazino_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.kazino_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.kazino_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.kazino_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.kazino_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.kazino_btn.setObjectName("kazino_btn")
         self.gridLayout.addWidget(self.kazino_btn, 2, 0, 1, 1)
         self.viktorina_btn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.viktorina_btn.setMinimumSize(QtCore.QSize(150, 50))
         self.viktorina_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.viktorina_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
+        self.viktorina_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(253, 102, 102);")
+"background-color: rgb(253, 102, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 22pt \"Georgia\";\n"
+"color: rgb(0, 0, 0);\n"
+"\n"
+"}\n"
+"")
         self.viktorina_btn.setObjectName("viktorina_btn")
         self.gridLayout.addWidget(self.viktorina_btn, 2, 2, 1, 1)
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -195,18 +283,37 @@ class Ui_ChoiceWindow(object):
         self.acc.setGeometry(QtCore.QRect(1650, 30, 250, 50))
         self.acc.setMinimumSize(QtCore.QSize(250, 50))
         self.acc.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.acc.setStyleSheet("background-color: rgba(255, 255, 255, 40);\n"
+        self.acc.setStyleSheet("QPushButton {\n"
+"    background-color: rgba(255, 255, 255, 40);\n"
 "font: 24pt \"Arial\";\n"
-"color: rgb(128, 0, 2);")
+"color: rgb(128, 0, 2);\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"font: 26pt \"Arial\";\n"
+"    color: rgb(252, 55, 37);\n"
+"}\n"
+"")
         self.acc.setObjectName("acc")
         self.go_back = QtWidgets.QPushButton(self.centralwidget)
         self.go_back.setGeometry(QtCore.QRect(1180, 830, 191, 71))
         self.go_back.setMinimumSize(QtCore.QSize(0, 60))
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
-"background-color: rgb(254, 204, 102);")
+"background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}\n"
+"")
         self.go_back.setObjectName("go_back")
         ChoiceWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(ChoiceWindow)

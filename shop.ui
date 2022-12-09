@@ -76,9 +76,18 @@ color: rgb(0, 0, 0);
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 30pt &quot;Helvetica&quot;;
+        <string notr="true">QPushButton {
+	font: 30pt &quot;Helvetica&quot;;
 background-color: rgb(253, 119, 15);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 32pt &quot;Helvetica&quot;;
+color: rgb(255, 255, 255);
+}</string>
        </property>
        <property name="text">
         <string>КУПИТЬ</string>
@@ -88,8 +97,7 @@ color: rgb(0, 0, 0);</string>
      <item row="3" column="0" colspan="3">
       <widget class="QTableWidget" name="tableItems">
        <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);
-background-color: rgba(253, 138, 8, 191);
+        <string notr="true">background-color: rgba(253, 138, 8, 191);
 font: 20pt &quot;Georgia&quot;;</string>
        </property>
       </widget>
@@ -158,9 +166,18 @@ color: rgb(0, 0, 0);</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 30pt &quot;Courier&quot;;
+     <string notr="true">QPushButton {
+	font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
-background-color: rgb(254, 204, 102);</string>
+background-color: rgb(254, 204, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(252, 69, 74);
+	font: 32pt &quot;Courier&quot;;
+}</string>
     </property>
     <property name="text">
      <string>Назад</string>

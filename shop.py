@@ -36,14 +36,22 @@ class Ui_ShopWindow(object):
         self.buy_btn.setMaximumSize(QtCore.QSize(500, 16777215))
         self.buy_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.buy_btn.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.buy_btn.setStyleSheet("font: 30pt \"Helvetica\";\n"
+        self.buy_btn.setStyleSheet("QPushButton {\n"
+"    font: 30pt \"Helvetica\";\n"
 "background-color: rgb(253, 119, 15);\n"
-"color: rgb(0, 0, 0);")
+"color: rgb(0, 0, 0);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    font: 32pt \"Helvetica\";\n"
+"color: rgb(255, 255, 255);\n"
+"}")
         self.buy_btn.setObjectName("buy_btn")
         self.gridLayout.addWidget(self.buy_btn, 4, 1, 1, 1)
         self.tableItems = QtWidgets.QTableWidget(self.gridLayoutWidget)
-        self.tableItems.setStyleSheet("color: rgb(0, 0, 0);\n"
-"background-color: rgba(253, 138, 8, 191);\n"
+        self.tableItems.setStyleSheet("background-color: rgba(253, 138, 8, 191);\n"
 "font: 20pt \"Georgia\";")
         self.tableItems.setObjectName("tableItems")
         self.tableItems.setColumnCount(0)
@@ -64,9 +72,18 @@ class Ui_ShopWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
-"background-color: rgb(254, 204, 102);")
+"background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}")
         self.go_back.setObjectName("go_back")
         ShopWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(ShopWindow)

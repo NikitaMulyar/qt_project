@@ -35,7 +35,7 @@
       <x>0</x>
       <y>760</y>
       <width>1921</width>
-      <height>150</height>
+      <height>152</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -64,9 +64,19 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 40pt &quot;Helvetica&quot;;
+        <string notr="true">QPushButton {
+	font: 40pt &quot;Helvetica&quot;;
 color: rgb(255, 255, 255);
-background-color: rgba(253, 128, 8, 200);</string>
+background-color: rgba(253, 128, 8, 200);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 44pt &quot;Helvetica&quot;;
+color: rgb(255, 255, 255);
+}
+</string>
        </property>
        <property name="text">
         <string>НАЧАТЬ</string>

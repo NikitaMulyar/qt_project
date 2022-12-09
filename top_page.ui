@@ -51,9 +51,18 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 30pt &quot;Courier&quot;;
+     <string notr="true">QPushButton {
+	font: 75 30pt &quot;Courier&quot;;
 color: rgb(252, 1, 7);
 background-color: rgb(254, 204, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(252, 69, 74);
+	font: 32pt &quot;Courier&quot;;
+}
 </string>
     </property>
     <property name="text">
@@ -76,10 +85,11 @@ background-color: rgb(254, 204, 102);
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;Georgia&quot;;</string>
+     <string notr="true">font: 20pt &quot;Georgia&quot;;
+background-color: rgb(253, 99, 8);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -93,6 +103,9 @@ background-color: rgb(254, 204, 102);
         <width>1491</width>
         <height>761</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
       </property>
      </widget>
     </widget>
@@ -109,6 +122,9 @@ background-color: rgb(254, 204, 102);
         <height>761</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
@@ -124,6 +140,9 @@ background-color: rgb(254, 204, 102);
         <height>761</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
@@ -138,6 +157,9 @@ background-color: rgb(254, 204, 102);
         <width>1491</width>
         <height>771</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
       </property>
      </widget>
     </widget>
@@ -198,18 +220,58 @@ ans_vikt, ans_work. Если
       <x>1570</x>
       <y>830</y>
       <width>291</width>
-      <height>61</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;Georgia&quot;;
-background-color: rgb(207, 101, 6);</string>
+     <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+	background-color: rgb(253, 128, 8);
+	border-radius: 15px;
+	border: 2px solid rgb(228, 13, 5);
+	color: rgb(0, 0, 0);
+}
+
+QPushButton:hover {
+	color: rgb(255, 255, 255);
+	font: 22pt &quot;Georgia&quot;;
+}</string>
     </property>
     <property name="text">
      <string>Искать!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="csv_download">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>890</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+	background-color: rgb(253, 128, 8);
+	border-radius: 15px;
+	border: 2px solid rgb(228, 13, 5);
+	color: rgb(0, 0, 0);
+}
+
+QPushButton:hover {
+	color: rgb(255, 255, 255);
+	font: 22pt &quot;Georgia&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Скачать в csv</string>
     </property>
    </widget>
   </widget>

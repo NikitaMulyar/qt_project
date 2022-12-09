@@ -27,20 +27,31 @@ class Ui_TopWindow(object):
         self.go_back.setMaximumSize(QtCore.QSize(200, 16777215))
         self.go_back.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.go_back.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.go_back.setStyleSheet("font: 75 30pt \"Courier\";\n"
+        self.go_back.setStyleSheet("QPushButton {\n"
+"    font: 75 30pt \"Courier\";\n"
 "color: rgb(252, 1, 7);\n"
 "background-color: rgb(254, 204, 102);\n"
+"border-radius: 15px;\n"
+"border: 2px solid rgb(228, 13, 5);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(252, 69, 74);\n"
+"    font: 32pt \"Courier\";\n"
+"}\n"
 "")
         self.go_back.setObjectName("go_back")
         self.tableTop = QtWidgets.QTabWidget(self.centralwidget)
         self.tableTop.setGeometry(QtCore.QRect(9, 169, 1491, 811))
         self.tableTop.setMinimumSize(QtCore.QSize(0, 801))
-        self.tableTop.setStyleSheet("font: 20pt \"Georgia\";")
+        self.tableTop.setStyleSheet("font: 20pt \"Georgia\";\n"
+"background-color: rgb(253, 99, 8);")
         self.tableTop.setObjectName("tableTop")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.tableBalances = QtWidgets.QTableWidget(self.tab)
         self.tableBalances.setGeometry(QtCore.QRect(0, 10, 1491, 761))
+        self.tableBalances.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.tableBalances.setObjectName("tableBalances")
         self.tableBalances.setColumnCount(0)
         self.tableBalances.setRowCount(0)
@@ -49,6 +60,7 @@ class Ui_TopWindow(object):
         self.tab_2.setObjectName("tab_2")
         self.tableVikt = QtWidgets.QTableWidget(self.tab_2)
         self.tableVikt.setGeometry(QtCore.QRect(0, 10, 1491, 761))
+        self.tableVikt.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.tableVikt.setObjectName("tableVikt")
         self.tableVikt.setColumnCount(0)
         self.tableVikt.setRowCount(0)
@@ -57,6 +69,7 @@ class Ui_TopWindow(object):
         self.tab_3.setObjectName("tab_3")
         self.tableWork = QtWidgets.QTableWidget(self.tab_3)
         self.tableWork.setGeometry(QtCore.QRect(0, 10, 1491, 761))
+        self.tableWork.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.tableWork.setObjectName("tableWork")
         self.tableWork.setColumnCount(0)
         self.tableWork.setRowCount(0)
@@ -65,6 +78,7 @@ class Ui_TopWindow(object):
         self.tab_4.setObjectName("tab_4")
         self.tableMyTop = QtWidgets.QTableWidget(self.tab_4)
         self.tableMyTop.setGeometry(QtCore.QRect(0, 0, 1491, 771))
+        self.tableMyTop.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.tableMyTop.setObjectName("tableMyTop")
         self.tableMyTop.setColumnCount(0)
         self.tableMyTop.setRowCount(0)
@@ -80,11 +94,37 @@ class Ui_TopWindow(object):
 "font: 16pt \"Tahoma\";")
         self.label.setObjectName("label")
         self.search_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.search_btn.setGeometry(QtCore.QRect(1570, 830, 291, 61))
+        self.search_btn.setGeometry(QtCore.QRect(1570, 830, 291, 51))
         self.search_btn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.search_btn.setStyleSheet("font: 20pt \"Georgia\";\n"
-"background-color: rgb(207, 101, 6);")
+        self.search_btn.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
+"    background-color: rgb(253, 128, 8);\n"
+"    border-radius: 15px;\n"
+"    border: 2px solid rgb(228, 13, 5);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(255, 255, 255);\n"
+"    font: 22pt \"Georgia\";\n"
+"}")
         self.search_btn.setObjectName("search_btn")
+        self.csv_download = QtWidgets.QPushButton(self.centralwidget)
+        self.csv_download.setGeometry(QtCore.QRect(1570, 890, 291, 51))
+        self.csv_download.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.csv_download.setStyleSheet("QPushButton {\n"
+"    font: 20pt \"Georgia\";\n"
+"    background-color: rgb(253, 128, 8);\n"
+"    border-radius: 15px;\n"
+"    border: 2px solid rgb(228, 13, 5);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: rgb(255, 255, 255);\n"
+"    font: 22pt \"Georgia\";\n"
+"}")
+        self.csv_download.setObjectName("csv_download")
         TopWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(TopWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1920, 24))
@@ -95,7 +135,7 @@ class Ui_TopWindow(object):
         TopWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(TopWindow)
-        self.tableTop.setCurrentIndex(2)
+        self.tableTop.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(TopWindow)
 
     def retranslateUi(self, TopWindow):
@@ -123,3 +163,4 @@ class Ui_TopWindow(object):
 "условий несколько, их нужно\n"
 "записать каждый на своей строке"))
         self.search_btn.setText(_translate("TopWindow", "Искать!"))
+        self.csv_download.setText(_translate("TopWindow", "Скачать в csv"))
