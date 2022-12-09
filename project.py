@@ -32,8 +32,8 @@ from invent import *
 
 
 # === ОБЪЯВЛЯЕМ КОНСТАНТЫ ДЛЯ РАБОТЫ ПРОГРАММЫ ===
-LOGINED = True
-USER_ID = 1
+LOGINED = False
+USER_ID = -1
 ACC_OBJ = None
 MODE = None
 HARD_LVL = None
