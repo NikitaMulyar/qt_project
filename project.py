@@ -1,4 +1,7 @@
+# -*- coding: utf-8 -*-
+
 import sys
+import csv
 import random
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QFileDialog, QLabel, QLineEdit
 from PyQt6.QtWidgets import QInputDialog, QTableWidgetItem, QDialog, QDialogButtonBox, QVBoxLayout
@@ -29,8 +32,8 @@ from invent import *
 
 
 # === ОБЪЯВЛЯЕМ КОНСТАНТЫ ДЛЯ РАБОТЫ ПРОГРАММЫ ===
-LOGINED = False
-USER_ID = -1
+LOGINED = True
+USER_ID = 1
 ACC_OBJ = None
 MODE = None
 HARD_LVL = None
@@ -348,6 +351,7 @@ class TopWindow(QMainWindow, Ui_TopWindow):
         self.go_back.clicked.connect(self.back)
         self.search_btn.clicked.connect(self.my_top)
         self.tableTop.currentChanged.connect(self.change_state)
+        self.csv_download.clicked.connect(self.download)
         # Чистим поле (если окно открывается не первый раз
         self.request_txt.clear()
         # Подключаемся к БД, чтобы взять нужную инфу о юзере
@@ -382,6 +386,40 @@ class TopWindow(QMainWindow, Ui_TopWindow):
         self.games_w.setStyleSheet(stylesheet_choice)
         self.games_w.show()
         self.close()
+
+    # === Ф-ИЯ СКАЧИВАНИЯ ТОПА В CSV ===
+    def download(self):
+        if self.tableTop.currentIndex() == 0:
+            curr_table = self.tableBalances
+        elif self.tableTop.currentIndex() == 1:
+            curr_table = self.tableVikt
+        elif self.tableTop.currentIndex() == 2:
+            curr_table = self.tableWork
+        else:
+            curr_table = self.tableMyTop
+        if curr_table.rowCount() == 0:
+            error('Нельзя сохранять пустой топ!', self)
+            return
+        with open('top_table.csv', 'w+', newline='', encoding='utf-16') as csvfile:
+            writer = csv.writer(
+                csvfile, delimiter=';', quotechar='"',
+                quoting=csv.QUOTE_MINIMAL)
+            # Получение списка заголовков
+            writer.writerow(
+                [curr_table.horizontalHeaderItem(i).text()
+                 for i in range(1, curr_table.columnCount())])
+            for i in range(curr_table.rowCount()):
+                row = []
+                for j in range(1, curr_table.columnCount()):
+                    item = curr_table.item(i, j)
+                    if item is not None:
+                        row.append(item.text())
+                writer.writerow(row)
+        msg = QMessageBox(self)
+        msg.setIcon(QMessageBox.Icon.Information)
+        msg.setText('Топ сохранен!')
+        msg.setWindowTitle("Круто!")
+        msg.exec()
 
     # === Ф-ИЯ ИЗМ. СОСТОЯНИЯ ТЕКСТ. ПОЛЯ ===
     # Ввод в текст. поле доступен только, если выбрана вкладка "СВОЙ ТОП". Делаем соотв. настройки
