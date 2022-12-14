@@ -1,11 +1,9 @@
-from exceptions import *
+from data.exceptions import *
 import sqlite3
-import os
 
 
 dict_words = set()
 some_words = set()
-print(os.getcwd())
 f_o = open("data/top 10000 passwd.txt", encoding="utf-8", mode="r")
 f_o2 = open("data/top-9999-words.txt", encoding="utf-8", mode="r")
 for line in f_o:
