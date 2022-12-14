@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChoiceWindow</class>
+ <widget class="QMainWindow" name="ChoiceWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Команды</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>150</y>
+      <width>1801</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="work_btn">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Работать</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Решите загадку и
+получите фиксированное
+вознаграждение!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label_11">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Сделайте ставку и
+попытайте свою удачу -
+главный приз - множитель
+x200!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLabel" name="label_17">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Иногда публикуются промокоды...
+Вы их можете ввести и получить приз!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_16">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Весь выигрыш зависит от
+выпавших фруктов!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="promo_btn">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Ввести промокод</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="label_15">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Обменяйте ваши деньги на призы!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="slots_btn">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Слоты</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="label_12">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Ответьте на вопрос и
+получите денежный приз!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_13">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Сделайте ставку и коэффициент - если
+выпавший коэффициент больше либо
+равен вашему, то вы получите
+ваш приз в рамезере вашей ставки
+на ваш поставленный коэффициент</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_14">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(0, 0, 0, 128);
+color: rgb(255, 255, 255);
+font: 20pt &quot;Verdana&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Узнайте, кто сейчас на первом месте!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="crash_btn">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Краш-казино</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(205, 0, 18);
+font: 28pt &quot;Arial Black&quot;;
+background-color: rgba(254, 184, 43, 128);</string>
+       </property>
+       <property name="text">
+        <string>Команда</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_7">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(205, 0, 18);
+font: 28pt &quot;Arial Black&quot;;
+background-color: rgba(254, 184, 43, 128);</string>
+       </property>
+       <property name="text">
+        <string>Команда</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(205, 0, 18);
+font: 28pt &quot;Arial Black&quot;;
+background-color: rgba(254, 184, 43, 128);</string>
+       </property>
+       <property name="text">
+        <string>Описание
+команды</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_8">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(205, 0, 18);
+font: 28pt &quot;Arial Black&quot;;
+background-color: rgba(254, 184, 43, 128);</string>
+       </property>
+       <property name="text">
+        <string>Описание
+команды</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="shop_btn">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Магазин</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="top_btn">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Топ</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="kazino_btn">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Казино</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="viktorina_btn">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font: 20pt &quot;Georgia&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(253, 102, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	font: 22pt &quot;Georgia&quot;;
+color: rgb(0, 0, 0);
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Викторина</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>59</x>
+      <y>759</y>
+      <width>551</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">font: 20pt &quot;Arial&quot;;
+color: rgb(128, 0, 2);</string>
+       </property>
+       <property name="text">
+        <string>Ваш баланс:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="balance_curr_txt">
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(252, 1, 7);
+font: 75 30pt &quot;Courier&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="acc">
+    <property name="geometry">
+     <rect>
+      <x>1650</x>
+      <y>30</y>
+      <width>250</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>250</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgba(255, 255, 255, 40);
+font: 24pt &quot;Arial&quot;;
+color: rgb(128, 0, 2);
+
+}
+
+QPushButton:hover {
+font: 26pt &quot;Arial&quot;;
+	color: rgb(252, 55, 37);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Мой Аккаунт</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="go_back">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>830</y>
+      <width>191</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 75 30pt &quot;Courier&quot;;
+color: rgb(252, 1, 7);
+background-color: rgb(254, 204, 102);
+border-radius: 15px;
+border: 2px solid rgb(228, 13, 5);
+}
+
+QPushButton:hover {
+	color: rgb(252, 69, 74);
+	font: 32pt &quot;Courier&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Назад</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
