@@ -1,11 +1,13 @@
 from exceptions import *
 import sqlite3
+import os
 
 
 dict_words = set()
 some_words = set()
-f_o = open("top 10000 passwd.txt", encoding="utf-8", mode="r")
-f_o2 = open("top-9999-words.txt", encoding="utf-8", mode="r")
+print(os.getcwd())
+f_o = open("data/top 10000 passwd.txt", encoding="utf-8", mode="r")
+f_o2 = open("data/top-9999-words.txt", encoding="utf-8", mode="r")
 for line in f_o:
     line = line.strip('\n')
     some_words.add(line)
@@ -65,7 +67,7 @@ def check_password(psw, old=''):
 def check_name(name, old=''):
     if old != '' and old == name:
         raise CurrError
-    connect = sqlite3.connect('users_db.sqlite3')
+    connect = sqlite3.connect('data/users_db.sqlite3')
     cur = connect.cursor()
     result = cur.execute("""SELECT * FROM users
                 WHERE username = ?""", (name,)).fetchall()
@@ -78,7 +80,7 @@ def check_name(name, old=''):
 
 # === Ф-ИЯ ПРОВЕРКИ БАЛАНСА ===
 def check_balance(stavka, id):
-    connect = sqlite3.connect('users_db.sqlite3')
+    connect = sqlite3.connect('data/users_db.sqlite3')
     cur = connect.cursor()
     result = cur.execute(f"""SELECT balance FROM users WHERE id = {id}""").fetchall()[0][0]
     connect.close()

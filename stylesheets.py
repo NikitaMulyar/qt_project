@@ -1,6 +1,6 @@
 stylesheet_main = """
             MainWindow {
-                background-image: url("main.png"); 
+                background-image: url("images/main.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -8,7 +8,7 @@ stylesheet_main = """
 
 stylesheet_choice = """
             ChoiceWindow {
-                background-image: url("choice_game.png"); 
+                background-image: url("images/choice_game.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -16,7 +16,7 @@ stylesheet_choice = """
 
 stylesheet_rol = """
                 LogOrRegWindow {
-                    background-image: url("acc_new_or_old.png"); 
+                    background-image: url("images/acc_new_or_old.png"); 
                     background-repeat: no-repeat; 
                     background-position: center;
                 }
@@ -24,7 +24,7 @@ stylesheet_rol = """
 
 stylesheet_acc = """
                             AccWindow {
-                                background-image: url("acc_bg.png"); 
+                                background-image: url("images/acc_bg.png"); 
                                 background-repeat: no-repeat; 
                                 background-position: center;
                             }
@@ -32,7 +32,7 @@ stylesheet_acc = """
 
 stylesheet_reg = """
             RegWindow {
-                background-image: url("registration.png"); 
+                background-image: url("images/registration.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -40,7 +40,7 @@ stylesheet_reg = """
 
 stylesheet_log = """
             LogWindow {
-                background-image: url("login_in_system.png"); 
+                background-image: url("images/login_in_system.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -48,7 +48,7 @@ stylesheet_log = """
 
 stylesheet_lvl = """
             LvlWindow {
-                background-image: url("complexity.png"); 
+                background-image: url("images/complexity.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -56,7 +56,7 @@ stylesheet_lvl = """
 
 stylesheet_prob = """
             ProbSolvWindow {
-                background-image: url("problem_solving.png"); 
+                background-image: url("images/problem_solving.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -64,7 +64,7 @@ stylesheet_prob = """
 
 stylesheet_vikt = """
             ViktWindow {
-                background-image: url("viktorina.png"); 
+                background-image: url("images/viktorina.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -72,7 +72,7 @@ stylesheet_vikt = """
 
 stylesheet_kaz = """
             KazWindow {
-                background-image: url("kazino.png"); 
+                background-image: url("images/kazino.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -80,7 +80,7 @@ stylesheet_kaz = """
 
 stylesheet_slot = """
             SlotWindow {
-                background-image: url("sloty.png"); 
+                background-image: url("images/sloty.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -88,7 +88,7 @@ stylesheet_slot = """
 
 stylesheet_promo = """
             PromoWindow {
-                background-image: url("promos.png"); 
+                background-image: url("images/promos.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -96,7 +96,7 @@ stylesheet_promo = """
 
 stylesheet_crash = """
             CrashKazWindow {
-                background-image: url("crash.png"); 
+                background-image: url("images/crash.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -104,7 +104,7 @@ stylesheet_crash = """
 
 stylesheet_top = """
             TopWindow {
-                background-image: url("top.png"); 
+                background-image: url("images/top.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -112,7 +112,7 @@ stylesheet_top = """
 
 stylesheet_shop = """
             ShopWindow {
-                background-image: url("shop.png"); 
+                background-image: url("images/shop.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }
@@ -120,7 +120,7 @@ stylesheet_shop = """
 
 stylesheet_invent = """
             InventWindow {
-                background-image: url("invent.png"); 
+                background-image: url("images/invent.png"); 
                 background-repeat: no-repeat; 
                 background-position: center;
             }

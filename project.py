@@ -9,26 +9,26 @@ from PyQt6.QtWidgets import QWidget
 from PyQt6.QtGui import QPixmap, QIcon, QColor
 from PyQt6.QtCore import QSize, QUrl
 from PyQt6.QtMultimedia import QAudioOutput, QMediaPlayer
-from main_window import *
-from choice_window import *
-from acc_info import *
-from acc_new_or_old import *
-from reg_window import *
-from log_window import *
-from level_window import *
-from work_cmd import *
-from vikt import *
-from kazino import *
-from check_funcs import *
+from design.main_window import *
+from design.choice_window import *
+from design.acc_info import *
+from design.acc_new_or_old import *
+from design.reg_window import *
+from design.log_window import *
+from design.level_window import *
+from design.work_cmd import *
+from design.vikt import *
+from design.kazino import *
+from data.check_funcs import *
 from stylesheets import *
-from questions import *
-from sloty import *
-from promocodes import *
-from promos import *
-from crash import *
-from top_page import *
-from shop import *
-from invent import *
+from data.questions import *
+from design.sloty import *
+from data.promocodes import *
+from design.promos import *
+from design.crash import *
+from design.top_page import *
+from design.shop import *
+from design.invent import *
 
 
 # === ОБЪЯВЛЯЕМ КОНСТАНТЫ ДЛЯ РАБОТЫ ПРОГРАММЫ ===
@@ -54,7 +54,7 @@ def error(exp, self):
 
 # === ФУНКЦИЯ ДОБАВЛЕНИЯ ЮЗЕРА В БД ===
 def append_user(name, psw):
-    connect = sqlite3.connect('users_db.sqlite3')
+    connect = sqlite3.connect('data/users_db.sqlite3')
     cursor = connect.cursor()
     cursor.execute(f"INSERT INTO users(username, password, balance) VALUES('{name}', '{psw}', 0)")
     connect.commit()
@@ -156,7 +156,7 @@ def set_lists(res):
 
 # === Ф-ИЯ ПОЛУЧЕНИЯ БАЛАНСА И ПРОВЕРКИ ИНВЕНТАРЯ НА НАЛИЧИЕ ПРЕМИУМА ===
 def get_balance_and_premium_coef():
-    con = sqlite3.connect('users_db.sqlite3')
+    con = sqlite3.connect('data/users_db.sqlite3')
     cur = con.cursor()
     res = cur.execute(f"""SELECT balance, inventory FROM users WHERE id = 
     {USER_ID}""").fetchall()[0]
@@ -188,10 +188,10 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
         super().__init__()
         self.setupUi(self)
         self.setFixedSize(1920, 1100)
-        file = 'acc_icon.png'
+        file = 'images/acc_icon.png'
         # Если юзер уже залогинился, то проверяем, есть ли у него ава (соотв. и выводим его баланс)
         if USER_ID != -1:
-            connect = sqlite3.connect('users_db.sqlite3')
+            connect = sqlite3.connect('data/users_db.sqlite3')
             cur = connect.cursor()
             res = cur.execute("""SELECT profile_pic, balance, filename FROM users
                                     WHERE id = ?""", (USER_ID,)).fetchall()[0]
@@ -201,7 +201,7 @@ class ChoiceWindow(QMainWindow, Ui_ChoiceWindow):
                     file = res[0]
                 if res[1] is not None:
                     self.balance_curr_txt.setText(str(res[1]))
-        if file == 'acc_icon.png':
+        if file == 'images/acc_icon.png':
             self.acc.setIcon(QIcon(file))
         else:
             self.pixmap = QPixmap()
@@ -355,7 +355,7 @@ class TopWindow(QMainWindow, Ui_TopWindow):
         # Чистим поле (если окно открывается не первый раз
         self.request_txt.clear()
         # Подключаемся к БД, чтобы взять нужную инфу о юзере
-        self.con = sqlite3.connect('users_db.sqlite3')
+        self.con = sqlite3.connect('data/users_db.sqlite3')
         self.cur = self.con.cursor()
         res = self.cur.execute(f"""SELECT id, username, balance, ans_vikt, ans_work, profile_pic,
          filename FROM users""").fetchall()
@@ -493,7 +493,7 @@ class PromoWindow(QMainWindow, Ui_PromoWindow):
     # === Ф-ИЯ ДЛЯ ПРОВЕРКИ ПРОМОКОДА (БЫЛ ЛИ ВВЕДЕН И СУЩЕСТВУЕТ ЛИ (С УСЛОВИЕМ, ЕСЛИ ЮЗЕР ЕГО
     # ПОЛУЧИЛ РАНЕЕ)) ===
     def run(self):
-        connect = sqlite3.connect('users_db.sqlite3')
+        connect = sqlite3.connect('data/users_db.sqlite3')
         cur = connect.cursor()
         # Подключаемся к БД
         res = cur.execute("""SELECT entered, balance, promocodes FROM users
@@ -581,7 +581,7 @@ class ViktWindow(QMainWindow, Ui_ViktWindow):
         msg = QMessageBox(self)
         # Если ответ верный, начисляем деньги
         if self.answ_area.text().lower() == VIKT_A[self.ind].lower():
-            connect = sqlite3.connect('users_db.sqlite3')
+            connect = sqlite3.connect('data/users_db.sqlite3')
             cur = connect.cursor()
             # Берем из БД нужны данные: баланс, кол-во ответов и инвентарь (чекаем премиум)
             curr_info = cur.execute(f"""SELECT balance, ans_vikt, inventory FROM users WHERE id = 
@@ -645,7 +645,7 @@ class KazWindow(QMainWindow, Ui_KazWindow):
         self.win_txt.clear()
         self.stavka_summ.clear()
         self.curr_hard.setText(HARD_LVL)
-        self.connect = sqlite3.connect('users_db.sqlite3')
+        self.connect = sqlite3.connect('data/users_db.sqlite3')
         self.cur = self.connect.cursor()
         # Берем из БД баланс юзера
         curr_blc = self.cur.execute(f"""SELECT balance FROM users WHERE id = 
@@ -744,7 +744,7 @@ class SlotWindow(QMainWindow, Ui_SlotWindow):
         self.stavka_summ.clear()
         self.curr_hard.setText(HARD_LVL)
         # Можно не комментировать? И так понятно же все: предустанавливаем начальные настройки
-        self.connect = sqlite3.connect('users_db.sqlite3')
+        self.connect = sqlite3.connect('data/users_db.sqlite3')
         self.cur = self.connect.cursor()
         curr_blc = self.cur.execute(f"""SELECT balance FROM users WHERE id = 
 {USER_ID}""").fetchall()[0][0]
@@ -844,7 +844,7 @@ class CrashKazWindow(QMainWindow, Ui_CrashKazWindow):
         self.win_txt.clear()
         self.stavka_summ.clear()
         self.curr_hard.setText(HARD_LVL)
-        self.connect = sqlite3.connect('users_db.sqlite3')
+        self.connect = sqlite3.connect('data/users_db.sqlite3')
         self.cur = self.connect.cursor()
         curr_blc = self.cur.execute(f"""SELECT balance FROM users WHERE id = 
 {USER_ID}""").fetchall()[0][0]
@@ -984,7 +984,7 @@ class ProbSolvWindow(QMainWindow, Ui_ProbSolvWindow):
                 add_s = 3000
             ver = random.randint(0, 2)
             # ver - если ver = 0 (шанс 33%), то выдадим промокод
-            connect = sqlite3.connect('users_db.sqlite3')
+            connect = sqlite3.connect('data/users_db.sqlite3')
             cur = connect.cursor()
             # ПоДкЛюЧаЕмСя К БД
             res = cur.execute(f"""SELECT balance, promocodes, ans_work, inventory FROM users WHERE 
@@ -1056,7 +1056,7 @@ class ShopWindow(QMainWindow, Ui_ShopWindow):
         self.setFixedSize(1920, 1100)
         self.go_back.clicked.connect(self.back)
         self.buy_btn.clicked.connect(self.buy)
-        self.con = sqlite3.connect('users_db.sqlite3')
+        self.con = sqlite3.connect('data/users_db.sqlite3')
         self.cur = self.con.cursor()
         # Из БД достаем всю инфу о товарах, заносим ее в таблицу
         res = self.cur.execute(f"""SELECT * FROM list""").fetchall()
@@ -1211,7 +1211,7 @@ class LogWindow(QMainWindow, Ui_LogWindow):
         global LOGINED, USER_ID
         name = self.username_enter.text()
         psw = self.psw_enter.text()
-        connect = sqlite3.connect('users_db.sqlite3')
+        connect = sqlite3.connect('data/users_db.sqlite3')
         cur = connect.cursor()
         result = cur.execute("""SELECT * FROM users
                         WHERE username = ? and password = ?""", (name, psw,)).fetchall()
@@ -1252,7 +1252,7 @@ class AccWindow(QMainWindow, Ui_AccWindow):
         self.change_psw_btn.clicked.connect(self.change_psw)
         self.del_acc_btn.clicked.connect(self.confirm_del)
         self.open_invent.clicked.connect(self.open)
-        self.connect = sqlite3.connect('users_db.sqlite3')
+        self.connect = sqlite3.connect('data/users_db.sqlite3')
         self.cur = self.connect.cursor()
         res = self.cur.execute("""SELECT * FROM users
                         WHERE id = ?""", (USER_ID,)).fetchall()
@@ -1441,7 +1441,7 @@ class InventWindow(QMainWindow, Ui_InventWindow):
         self.setupUi(self)
         self.setFixedSize(1920, 1100)
         self.close_window.clicked.connect(self.close)
-        self.con = sqlite3.connect('users_db.sqlite3')
+        self.con = sqlite3.connect('data/users_db.sqlite3')
         self.cur = self.con.cursor()
         res = self.cur.execute(f"""SELECT inventory FROM users WHERE id = 
 {USER_ID}""").fetchall()[0][0]
@@ -1478,7 +1478,7 @@ if __name__ == '__main__':
     player = QMediaPlayer()
     audio_output = QAudioOutput()
     player.setAudioOutput(audio_output)
-    player.setSource(QUrl.fromLocalFile("music.mp3"))
+    player.setSource(QUrl.fromLocalFile("data/music.mp3"))
     audio_output.setVolume(1)
     player.setLoops(999)
     player.play()
